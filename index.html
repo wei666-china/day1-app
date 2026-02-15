@@ -194,12 +194,11 @@
         }
         .showcase-scroll {
             display: flex;
-            gap: 24px;
+            gap: 20px;
             justify-content: center;
             overflow: hidden;
             padding: 20px 0 30px;
             flex: 1;
-            transition: transform 0.4s ease;
         }
         .showcase-arrow {
             width: 48px;
@@ -243,9 +242,15 @@
             border-radius: 4px;
         }
         .phone-frame {
-            width: 220px;
+            width: 0;
+            flex: 1 1 0;
+            max-width: 200px;
             flex-shrink: 0;
             position: relative;
+            display: none;
+        }
+        .phone-frame.visible {
+            display: block;
         }
         .phone-frame img {
             width: 100%;
@@ -728,47 +733,67 @@ function switchLang(lang) {
 }
 
 // Screenshot carousel
-let currentSlide = 0;
-const totalSlides = document.querySelectorAll('#screenshotScroll .phone-frame').length;
-const scrollContainer = document.getElementById('screenshotScroll');
+const allFrames = document.querySelectorAll('#screenshotScroll .phone-frame');
+const totalFrames = allFrames.length;
+let currentPage = 0;
 const dotsContainer = document.getElementById('showcaseDots');
 
-// Create dots
-for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('div');
-    dot.className = 'showcase-dot' + (i === 0 ? ' active' : '');
-    dot.onclick = () => goToSlide(i);
-    dotsContainer.appendChild(dot);
+function getPerPage() {
+    if (window.innerWidth <= 480) return 2;
+    if (window.innerWidth <= 768) return 3;
+    return 5;
 }
 
-function updateDots() {
-    document.querySelectorAll('.showcase-dot').forEach((dot, i) => {
-        dot.className = 'showcase-dot' + (i === currentSlide ? ' active' : '');
+function getTotalPages() {
+    return Math.ceil(totalFrames / getPerPage());
+}
+
+function renderCarousel() {
+    const perPage = getPerPage();
+    const start = currentPage * perPage;
+    const end = start + perPage;
+
+    allFrames.forEach((frame, i) => {
+        if (i >= start && i < end) {
+            frame.classList.add('visible');
+            frame.style.opacity = '0';
+            frame.style.transform = 'translateY(15px)';
+            setTimeout(() => {
+                frame.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                frame.style.opacity = '1';
+                frame.style.transform = 'translateY(0)';
+            }, (i - start) * 80);
+        } else {
+            frame.classList.remove('visible');
+        }
     });
-}
 
-function goToSlide(index) {
-    currentSlide = index;
-    const frames = scrollContainer.querySelectorAll('.phone-frame');
-    if (frames[currentSlide]) {
-        const frameWidth = frames[0].offsetWidth + 24; // width + gap
-        const containerWidth = scrollContainer.offsetWidth;
-        const offset = (currentSlide * frameWidth) - (containerWidth / 2) + (frames[0].offsetWidth / 2);
-        scrollContainer.scrollTo({ left: Math.max(0, offset), behavior: 'smooth' });
+    // Update dots
+    dotsContainer.innerHTML = '';
+    const totalPages = getTotalPages();
+    for (let i = 0; i < totalPages; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'showcase-dot' + (i === currentPage ? ' active' : '');
+        dot.onclick = () => { currentPage = i; renderCarousel(); };
+        dotsContainer.appendChild(dot);
     }
-    updateDots();
+
+    // Hide arrows if not needed
+    document.querySelector('.showcase-arrow-left').style.opacity = currentPage === 0 ? '0.3' : '1';
+    document.querySelector('.showcase-arrow-left').style.pointerEvents = currentPage === 0 ? 'none' : 'auto';
+    document.querySelector('.showcase-arrow-right').style.opacity = currentPage >= totalPages - 1 ? '0.3' : '1';
+    document.querySelector('.showcase-arrow-right').style.pointerEvents = currentPage >= totalPages - 1 ? 'none' : 'auto';
 }
 
 function slideScreenshots(direction) {
-    currentSlide = Math.max(0, Math.min(totalSlides - 1, currentSlide + direction));
-    goToSlide(currentSlide);
+    const totalPages = getTotalPages();
+    currentPage = Math.max(0, Math.min(totalPages - 1, currentPage + direction));
+    renderCarousel();
 }
 
-// Make scroll container scrollable for dots sync
-scrollContainer.style.overflowX = 'auto';
-scrollContainer.style.scrollSnapType = 'x mandatory';
-scrollContainer.style.scrollbarWidth = 'none';
-scrollContainer.querySelectorAll('.phone-frame').forEach(f => f.style.scrollSnapAlign = 'center');
+// Init
+renderCarousel();
+window.addEventListener('resize', () => { currentPage = 0; renderCarousel(); });
 
 // Intersection Observer for scroll animations
 const observer = new IntersectionObserver((entries) => {
