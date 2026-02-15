@@ -186,22 +186,66 @@
             margin: 0 auto;
             padding: 0 24px;
         }
+        .showcase-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
         .showcase-scroll {
             display: flex;
             gap: 24px;
-            justify-content: flex-start;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
+            justify-content: center;
+            overflow: hidden;
             padding: 20px 0 30px;
-            scrollbar-width: none;
+            flex: 1;
+            transition: transform 0.4s ease;
         }
-        .showcase-scroll::-webkit-scrollbar { display: none; }
+        .showcase-arrow {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+            color: rgba(255,255,255,0.6);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .showcase-arrow:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(108,92,231,0.3);
+            color: #fff;
+        }
+        .showcase-arrow svg { width: 20px; height: 20px; }
+        .showcase-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .showcase-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .showcase-dot.active {
+            background: var(--orange);
+            width: 24px;
+            border-radius: 4px;
+        }
         .phone-frame {
             width: 220px;
             flex-shrink: 0;
             position: relative;
-            scroll-snap-align: center;
         }
         .phone-frame img {
             width: 100%;
@@ -461,9 +505,11 @@
             nav { padding: 16px 20px; }
             .nav-links { display: none; }
             .hero { padding: 60px 20px 30px; }
-            .showcase-scroll { gap: 16px; }
-            .phone-frame { width: 160px; }
+            .showcase-scroll { gap: 12px; }
+            .phone-frame { width: 150px; }
             .phone-frame img { border-radius: 18px; }
+            .showcase-arrow { width: 36px; height: 36px; }
+            .showcase-arrow svg { width: 16px; height: 16px; }
             .steps {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -475,8 +521,9 @@
         }
 
         @media (max-width: 480px) {
-            .phone-frame { width: 140px; }
-            .showcase-scroll { gap: 12px; }
+            .phone-frame { width: 130px; }
+            .showcase-scroll { gap: 10px; }
+            .showcase-arrow { width: 32px; height: 32px; }
         }
     </style>
 </head>
@@ -519,35 +566,38 @@
 
 <!-- App Screenshots -->
 <section class="showcase">
-    <div class="showcase-scroll">
-        <div class="phone-frame animate animate-delay-1">
-            <img src="screenshots/smart-decision.png" alt="Smart Decision" loading="lazy">
-            <div class="phone-label" data-zh="智能決策" data-en="Smart Decision">智能決策</div>
+    <div class="showcase-inner">
+        <div class="showcase-container">
+            <button class="showcase-arrow showcase-arrow-left" onclick="slideScreenshots(-1)" aria-label="Previous">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="showcase-scroll" id="screenshotScroll">
+                <div class="phone-frame">
+                    <img src="screenshots/smart-decision.png" alt="Smart Decision" loading="lazy">
+                    <div class="phone-label" data-zh="智能決策" data-en="Smart Decision">智能決策</div>
+                </div>
+                <div class="phone-frame">
+                    <img src="screenshots/pre-workout.png" alt="Pre-Workout Check" loading="lazy">
+                    <div class="phone-label" data-zh="訓練前檢測" data-en="Pre-Workout Check">訓練前檢測</div>
+                </div>
+                <div class="phone-frame">
+                    <img src="screenshots/live-training.png" alt="AI Assistant in Training" loading="lazy">
+                    <div class="phone-label" data-zh="訓練時的 AI 幫手" data-en="AI Assistant in Training">訓練時的 AI 幫手</div>
+                </div>
+                <div class="phone-frame">
+                    <img src="screenshots/ai-coach.png" alt="AI Coach" loading="lazy">
+                    <div class="phone-label" data-zh="AI 教練" data-en="AI Coach">AI 教練</div>
+                </div>
+                <div class="phone-frame">
+                    <img src="screenshots/weekly-report.png" alt="AI Weekly Report" loading="lazy">
+                    <div class="phone-label" data-zh="AI 週報" data-en="AI Weekly Report">AI 週報</div>
+                </div>
+            </div>
+            <button class="showcase-arrow showcase-arrow-right" onclick="slideScreenshots(1)" aria-label="Next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
         </div>
-        <div class="phone-frame animate animate-delay-2">
-            <img src="screenshots/pre-workout.png" alt="Pre-Workout Check" loading="lazy">
-            <div class="phone-label" data-zh="訓練前檢測" data-en="Pre-Workout Check">訓練前檢測</div>
-        </div>
-        <div class="phone-frame animate animate-delay-3">
-            <img src="screenshots/live-training.png" alt="Live Training" loading="lazy">
-            <div class="phone-label" data-zh="即時訓練" data-en="Live Training">即時訓練</div>
-        </div>
-        <div class="phone-frame animate animate-delay-1">
-            <img src="screenshots/ai-coach.png" alt="AI Coach" loading="lazy">
-            <div class="phone-label" data-zh="AI 教練" data-en="AI Coach">AI 教練</div>
-        </div>
-        <div class="phone-frame animate animate-delay-2">
-            <img src="screenshots/training.png" alt="Training Plans" loading="lazy">
-            <div class="phone-label" data-zh="訓練計劃" data-en="Training Plans">訓練計劃</div>
-        </div>
-        <div class="phone-frame animate animate-delay-3">
-            <img src="screenshots/weekly-report.png" alt="AI Weekly Report" loading="lazy">
-            <div class="phone-label" data-zh="AI 週報" data-en="AI Weekly Report">AI 週報</div>
-        </div>
-        <div class="phone-frame animate animate-delay-4">
-            <img src="screenshots/body-tracking.png" alt="Body Tracking" loading="lazy">
-            <div class="phone-label" data-zh="體態追蹤" data-en="Body Tracking">體態追蹤</div>
-        </div>
+        <div class="showcase-dots" id="showcaseDots"></div>
     </div>
 </section>
 
@@ -676,6 +726,49 @@ function switchLang(lang) {
     });
     document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
 }
+
+// Screenshot carousel
+let currentSlide = 0;
+const totalSlides = document.querySelectorAll('#screenshotScroll .phone-frame').length;
+const scrollContainer = document.getElementById('screenshotScroll');
+const dotsContainer = document.getElementById('showcaseDots');
+
+// Create dots
+for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'showcase-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+}
+
+function updateDots() {
+    document.querySelectorAll('.showcase-dot').forEach((dot, i) => {
+        dot.className = 'showcase-dot' + (i === currentSlide ? ' active' : '');
+    });
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    const frames = scrollContainer.querySelectorAll('.phone-frame');
+    if (frames[currentSlide]) {
+        const frameWidth = frames[0].offsetWidth + 24; // width + gap
+        const containerWidth = scrollContainer.offsetWidth;
+        const offset = (currentSlide * frameWidth) - (containerWidth / 2) + (frames[0].offsetWidth / 2);
+        scrollContainer.scrollTo({ left: Math.max(0, offset), behavior: 'smooth' });
+    }
+    updateDots();
+}
+
+function slideScreenshots(direction) {
+    currentSlide = Math.max(0, Math.min(totalSlides - 1, currentSlide + direction));
+    goToSlide(currentSlide);
+}
+
+// Make scroll container scrollable for dots sync
+scrollContainer.style.overflowX = 'auto';
+scrollContainer.style.scrollSnapType = 'x mandatory';
+scrollContainer.style.scrollbarWidth = 'none';
+scrollContainer.querySelectorAll('.phone-frame').forEach(f => f.style.scrollSnapAlign = 'center');
 
 // Intersection Observer for scroll animations
 const observer = new IntersectionObserver((entries) => {
