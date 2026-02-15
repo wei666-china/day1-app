@@ -97,7 +97,12 @@
             height: 100%;
             object-fit: cover;
         }
-        .logo-text span { color: var(--purple); }
+        .logo-text {
+            background: linear-gradient(135deg, #E17055, #D63031);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         .nav-links { display: flex; gap: 32px; }
         .nav-links a {
             color: rgba(255,255,255,0.5);
@@ -620,7 +625,7 @@
         <div class="footer-left">
             <div class="logo" style="font-size:18px;">
                 <div class="logo-icon" style="width:28px;height:28px;border-radius:8px;"><img src="screenshots/app-icon.png" alt="DAY 1"></div>
-                <div class="logo-text">DAY <span style="color:var(--purple)">1</span></div>
+                <div class="logo-text">DAY 1</div>
             </div>
             <p data-zh="由 Liu Azure 獨立開發" data-en="Independently developed by Liu Azure">由 Liu Azure 獨立開發</p>
         </div>
