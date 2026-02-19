@@ -160,25 +160,29 @@
 
 <h2>四、AI 對話功能與資料處理</h2>
 <h3>1. 資料傳送範圍</h3>
-<p>當您使用 AI 對話功能時，我們會將以下經過脫敏處理的上下文資訊傳送至 AI 服務提供商：</p>
+<p>當您使用 AI 對話功能時，我們會將以下上下文資訊傳送至 AI 服務提供商：</p>
 <ul>
-    <li>您的年齡段（如「25-30 歲」，非精確年齡）</li>
-    <li>當前訓練階段和飲食目標概要</li>
-    <li>近期訓練資料摘要、健康資料摘要</li>
-    <li>當日身體狀態自評資訊</li>
+    <li>您的年齡段（如「25-29 歲」，非精確年齡）</li>
+    <li>身高（cm）、體重（kg）、體脂率（%）</li>
+    <li>當前訓練階段、飲食目標及營養目標（每日熱量、蛋白質目標）</li>
+    <li>近期訓練資料（訓練計劃名稱、動作、重量、組數、訓練頻次）</li>
+    <li>健康資料數值（靜息心率、心率變異性 HRV、體溫、睡眠時長、每日步數、活動能量消耗）</li>
+    <li>當日身體狀態自評資訊（精力、酸痛、壓力等級）</li>
+    <li>基礎代謝率（BMR）估算值</li>
+    <li>生理週期階段名稱（僅女性用戶啟用時）</li>
 </ul>
 <h3>2. 私隱保護措施</h3>
 <ul>
     <li>使用年齡段替代精確年齡，避免精準畫像</li>
-    <li>僅傳送必要的統計摘要，不傳送原始資料</li>
-    <li>不傳送任何可直接識別您個人身份的資料</li>
+    <li>不傳送任何可直接識別您個人身份的資料（如姓名、電話號碼、地理位置等）</li>
     <li>每次對話獨立處理，不會在服務端建立用戶檔案</li>
+    <li>生理週期僅傳送階段名稱（如「卵泡期」），不傳送精確日期</li>
 </ul>
 <h3>3. 本地儲存</h3>
 <p>您的 AI 對話歷史紀錄僅保存在您的裝置本地，不會上傳至我們或第三方的伺服器。</p>
 
 <h3>4. 第三方 AI 服務提供商</h3>
-<p>我們默認使用阿里雲 DashScope（通義千問）大語言模型 API 服務處理 AI 對話請求。您也可以在應用設定中自行配置其他 AI 服務商。</p>
+<p>我們默認使用阿里雲 DashScope（通義千問）大語言模型 API 服務處理 AI 對話請求。您也可以在應用設定中自行配置其他 AI 服務商。如您在應用設定中自行配置了其他第三方 AI 服務地址，資料將傳送至您所指定的伺服器，其資料處理規則以該服務商的私隱政策為準，我們無法對此承擔責任。</p>
 <div class="highlight">
 <strong>我們的控制措施：</strong>僅傳送脫敏統計摘要 ｜ 每次對話獨立發起 ｜ HTTPS 加密傳輸 ｜ 不提供可識別身份資料
 </div>
@@ -265,17 +269,27 @@
 
 <h2>4. AI Conversation Feature</h2>
 <h3>4.1 Data Transmitted</h3>
-<p>De-identified summaries only: age range, training phase, health data summaries, and daily condition self-assessment.</p>
+<p>When you use the AI conversation feature, the following contextual information is sent to our AI service provider:</p>
+<ul>
+    <li>Your age range (e.g., "25-29," not your exact age)</li>
+    <li>Height (cm), weight (kg), body fat percentage (%)</li>
+    <li>Current training phase, dietary goals, and nutrition targets (daily calorie and protein goals)</li>
+    <li>Recent training data (plan names, exercises, weights, sets, training frequency)</li>
+    <li>Health data values (resting heart rate, heart rate variability/HRV, body temperature, sleep duration, daily steps, active energy burned)</li>
+    <li>Daily body condition self-assessment (energy level, soreness, stress level)</li>
+    <li>Estimated basal metabolic rate (BMR)</li>
+    <li>Menstrual cycle phase name (only when enabled by female users)</li>
+</ul>
 <h3>4.2 Privacy Safeguards</h3>
 <ul>
-    <li>Age ranges instead of exact ages</li>
-    <li>Statistical summaries only, no raw data</li>
-    <li>No personally identifiable information transmitted</li>
-    <li>Each conversation processed independently</li>
+    <li>Age ranges instead of exact ages to prevent precise profiling</li>
+    <li>No personally identifiable information transmitted (such as name, phone number, or location)</li>
+    <li>Each conversation processed independently; no user profiles built on server side</li>
+    <li>Menstrual cycle data transmits only the phase name (e.g., "follicular phase"), not exact dates</li>
 </ul>
 
 <h3>4.3 Third-Party AI Service Provider</h3>
-<p>We use Alibaba Cloud DashScope (Qwen) by default. You may configure other providers in App settings.</p>
+<p>We use Alibaba Cloud DashScope (Qwen) by default. You may configure other providers in App settings. If you configure a custom third-party AI service address in the App settings, data will be sent to the server you specify, and the data processing rules of that service provider's privacy policy shall apply. We cannot assume responsibility for such third-party services.</p>
 <div class="highlight">
 <strong>Our safeguards:</strong> De-identified summaries only | Independent requests | HTTPS encryption | No PII provided
 </div>
