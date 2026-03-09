@@ -12,9 +12,9 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --purple: #6C5CE7;
-            --purple-light: #A29BFE;
-            --blue: #74B9FF;
+            --purple: #E8602C;
+            --purple-light: #F0845A;
+            --blue: #E84393;
             --orange: #E17055;
             --bg: #09090B;
             --card-bg: rgba(255,255,255,0.03);
@@ -125,8 +125,8 @@
             align-items: center;
             gap: 8px;
             padding: 8px 18px;
-            background: rgba(108, 92, 231, 0.1);
-            border: 1px solid rgba(108, 92, 231, 0.2);
+            background: rgba(232, 96, 44, 0.1);
+            border: 1px solid rgba(232, 96, 44, 0.2);
             border-radius: 24px;
             color: var(--purple-light);
             font-size: 13px;
@@ -142,7 +142,7 @@
             margin-bottom: 24px;
         }
         .hero h1 .gradient {
-            background: linear-gradient(135deg, #6C5CE7, #A29BFE, #74B9FF);
+            background: linear-gradient(135deg, #E8602C, #E84393, #F0845A);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -218,7 +218,7 @@
         }
         .showcase-arrow:hover {
             background: rgba(255,255,255,0.1);
-            border-color: rgba(108,92,231,0.3);
+            border-color: rgba(232,96,44,0.3);
             color: #fff;
         }
         .showcase-arrow svg { width: 20px; height: 20px; }
@@ -261,7 +261,7 @@
         }
         .phone-frame:hover img {
             transform: translateY(-8px);
-            box-shadow: 0 30px 80px rgba(108,92,231,0.2), 0 0 0 1px rgba(108,92,231,0.15);
+            box-shadow: 0 30px 80px rgba(232,96,44,0.2), 0 0 0 1px rgba(232,96,44,0.15);
         }
         .phone-label {
             text-align: center;
@@ -354,7 +354,7 @@
             transition: border-color 0.3s, transform 0.3s;
         }
         .feature-card:hover {
-            border-color: rgba(108,92,231,0.25);
+            border-color: rgba(232,96,44,0.25);
             transform: translateY(-4px);
         }
         .feature-icon {
@@ -370,9 +370,9 @@
             width: 24px;
             height: 24px;
         }
-        .feature-icon.purple { background: rgba(108, 92, 231, 0.12); color: var(--purple-light); }
+        .feature-icon.purple { background: rgba(232, 96, 44, 0.12); color: var(--purple-light); }
         .feature-icon.red { background: rgba(225, 112, 85, 0.12); color: #E17055; }
-        .feature-icon.blue { background: rgba(116, 185, 255, 0.12); color: var(--blue); }
+        .feature-icon.blue { background: rgba(232, 67, 147, 0.12); color: var(--blue); }
         .feature-icon.green { background: rgba(0, 206, 209, 0.12); color: #00CED1; }
         .feature-icon.yellow { background: rgba(253, 203, 110, 0.12); color: #FDCB6E; }
         .feature-icon.pink { background: rgba(232, 67, 147, 0.12); color: #E84393; }
@@ -387,6 +387,79 @@
             line-height: 1.65;
         }
 
+        /* ===== Interactive Demo ===== */
+        .demo-section { max-width: 1000px; margin: 0 auto 100px; padding: 0 24px; }
+        .demo-tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 40px; flex-wrap: wrap; }
+        .demo-tab { padding: 10px 22px; border: 1px solid var(--card-border); border-radius: 24px; background: var(--card-bg); color: var(--text-secondary); cursor: pointer; font-size: 14px; font-weight: 500; font-family: inherit; transition: all 0.3s; }
+        .demo-tab:hover { border-color: rgba(232,96,44,0.3); color: #fff; }
+        .demo-tab.active { background: linear-gradient(135deg, var(--purple), var(--blue)); border-color: transparent; color: #fff; }
+        .demo-panel { display: none; }
+        .demo-panel.active { display: block; }
+        .phone-mock { width: 340px; max-width: 100%; margin: 0 auto; background: #1A1A2E; border-radius: 36px; border: 2px solid rgba(255,255,255,0.08); box-shadow: 0 30px 80px rgba(0,0,0,0.5); overflow: hidden; }
+        .phone-mock-notch { width: 120px; height: 5px; background: rgba(255,255,255,0.1); border-radius: 3px; margin: 10px auto 0; }
+        .phone-mock-header { padding: 14px 20px 12px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .mock-avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--purple), var(--blue)); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+        .mock-info .mock-title { font-size: 14px; font-weight: 600; }
+        .mock-info .mock-subtitle { font-size: 11px; color: var(--text-muted); }
+        .phone-mock-body { padding: 16px; min-height: 340px; max-height: 400px; overflow-y: auto; }
+        .chat-messages { display: flex; flex-direction: column; gap: 10px; }
+        .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 16px; font-size: 13px; line-height: 1.55; animation: demoFade 0.35s ease; }
+        @keyframes demoFade { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+        .chat-msg.ai { align-self: flex-start; background: rgba(232,96,44,0.12); border: 1px solid rgba(232,96,44,0.15); color: rgba(255,255,255,0.9); border-bottom-left-radius: 4px; }
+        .chat-msg.user { align-self: flex-end; background: rgba(255,255,255,0.1); color: #fff; border-bottom-right-radius: 4px; }
+        .chat-options { padding: 12px 16px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; gap: 8px; }
+        .chat-option-btn { padding: 10px 16px; border: 1px solid rgba(232,96,44,0.25); border-radius: 12px; background: rgba(232,96,44,0.06); color: var(--purple-light); font-size: 13px; font-family: inherit; cursor: pointer; text-align: left; transition: all 0.2s; }
+        .chat-option-btn:hover { background: rgba(232,96,44,0.15); border-color: rgba(232,96,44,0.4); }
+        .chat-option-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+        .typing-dots { display: inline-flex; gap: 4px; padding: 10px 14px; align-self: flex-start; background: rgba(232,96,44,0.12); border: 1px solid rgba(232,96,44,0.15); border-radius: 16px; border-bottom-left-radius: 4px; }
+        .typing-dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--purple-light); animation: dotBounce 1.2s infinite; }
+        .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes dotBounce { 0%,60%,100%{ transform:translateY(0); opacity:0.4; } 30%{ transform:translateY(-6px); opacity:1; } }
+        .recovery-body { display: flex; flex-direction: column; align-items: center; padding: 20px 16px; min-height: 340px; }
+        .recovery-ring { width: 150px; height: 150px; position: relative; margin-bottom: 20px; }
+        .recovery-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        .rr-bg { fill: none; stroke: rgba(255,255,255,0.06); stroke-width: 10; }
+        .rr-fill { fill: none; stroke-width: 10; stroke-linecap: round; stroke-dasharray: 408; stroke-dashoffset: 408; transition: stroke-dashoffset 1.5s ease, stroke 0.5s ease; }
+        .rr-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; }
+        .rr-center .rr-score { font-size: 36px; font-weight: 800; letter-spacing: -1px; }
+        .rr-center .rr-label { font-size: 11px; color: var(--text-muted); }
+        .recovery-status { padding: 8px 20px; border-radius: 24px; font-size: 14px; font-weight: 600; margin-bottom: 16px; opacity: 0; transform: scale(0.8); transition: all 0.4s ease; }
+        .recovery-status.show { opacity: 1; transform: scale(1); }
+        .recovery-bars { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+        .rb-item { opacity: 0; transform: translateX(-10px); transition: all 0.4s ease; }
+        .rb-item.show { opacity: 1; transform: translateX(0); }
+        .rb-top { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+        .rb-track { height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; }
+        .rb-fill { height: 100%; border-radius: 3px; width: 0; transition: width 1s ease; }
+        .recovery-btn { margin-top: 16px; padding: 12px 32px; border: none; border-radius: 14px; background: linear-gradient(135deg, var(--purple), var(--blue)); color: #fff; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .recovery-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,96,44,0.3); }
+        .recovery-btn:disabled { opacity: 0.5; cursor: default; transform: none; box-shadow: none; }
+        .plan-body { padding: 16px; min-height: 340px; }
+        .plan-goals { display: flex; gap: 8px; margin-bottom: 16px; }
+        .plan-goal-btn { flex: 1; padding: 10px 6px; border: 1px solid var(--card-border); border-radius: 12px; background: var(--card-bg); color: var(--text-secondary); font-size: 12px; font-weight: 500; font-family: inherit; cursor: pointer; text-align: center; transition: all 0.3s; }
+        .plan-goal-btn .g-icon { font-size: 20px; display: block; margin-bottom: 3px; }
+        .plan-goal-btn:hover { border-color: rgba(232,96,44,0.3); }
+        .plan-goal-btn.active { border-color: var(--purple); background: rgba(232,96,44,0.1); color: #fff; }
+        .plan-spinner-wrap { text-align: center; padding: 40px 0; display: none; }
+        .plan-spinner-wrap.show { display: block; }
+        .plan-spinner { width: 32px; height: 32px; border: 3px solid rgba(232,96,44,0.2); border-top-color: var(--purple-light); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 10px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .plan-spinner-wrap p { font-size: 13px; color: var(--text-secondary); }
+        .plan-result { display: none; }
+        .plan-result.show { display: block; animation: demoFade 0.4s ease; }
+        .plan-card { background: linear-gradient(135deg, rgba(232,96,44,0.15), rgba(232,67,147,0.1)); border: 1px solid rgba(232,96,44,0.15); border-radius: 14px; padding: 16px; margin-bottom: 14px; text-align: center; }
+        .plan-card .pc-day { font-size: 11px; color: var(--purple-light); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .plan-card .pc-title { font-size: 18px; font-weight: 700; margin: 4px 0; }
+        .plan-card .pc-meta { font-size: 12px; color: var(--text-muted); }
+        .plan-exercises { display: flex; flex-direction: column; gap: 8px; }
+        .plan-ex { display: flex; align-items: center; gap: 12px; padding: 10px 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; opacity: 0; transform: translateX(-10px); transition: all 0.3s ease; }
+        .plan-ex.show { opacity: 1; transform: translateX(0); }
+        .plan-ex-num { width: 28px; height: 28px; border-radius: 50%; background: rgba(232,96,44,0.12); color: var(--purple-light); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+        .plan-ex-name { font-size: 13px; font-weight: 600; }
+        .plan-ex-detail { font-size: 11px; color: var(--text-muted); }
+        @media (max-width: 768px) { .phone-mock { width: 300px; } .demo-tab { padding: 8px 16px; font-size: 13px; } }
+
         /* Privacy Banner */
         .privacy-banner {
             max-width: 800px;
@@ -394,8 +467,8 @@
             padding: 0 24px;
         }
         .privacy-banner-inner {
-            background: linear-gradient(135deg, rgba(108,92,231,0.08), rgba(116,185,255,0.05));
-            border: 1px solid rgba(108, 92, 231, 0.12);
+            background: linear-gradient(135deg, rgba(232,96,44,0.08), rgba(232,67,147,0.05));
+            border: 1px solid rgba(232, 96, 44, 0.12);
             border-radius: 24px;
             padding: 48px 40px;
             text-align: center;
@@ -409,14 +482,14 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle at 30% 50%, rgba(108,92,231,0.06), transparent 50%);
+            background: radial-gradient(circle at 30% 50%, rgba(232,96,44,0.06), transparent 50%);
             pointer-events: none;
         }
         .privacy-icon {
             width: 64px;
             height: 64px;
             border-radius: 20px;
-            background: rgba(108,92,231,0.1);
+            background: rgba(232,96,44,0.1);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -603,6 +676,93 @@
             </button>
         </div>
         <div class="showcase-dots" id="showcaseDots"></div>
+    </div>
+</section>
+
+<!-- Interactive Demo -->
+<section class="demo-section" id="demo">
+    <h2 class="section-title" data-zh="親自體驗" data-en="Try It Yourself">親自體驗</h2>
+    <p class="section-subtitle" data-zh="點擊下方模擬，感受 DAY 1 的核心功能" data-en="Tap below to experience DAY 1's core features">點擊下方模擬，感受 DAY 1 的核心功能</p>
+
+    <div class="demo-tabs">
+        <button class="demo-tab active" onclick="switchDemo('chat')" data-zh="AI 教練對話" data-en="AI Coach Chat">AI 教練對話</button>
+        <button class="demo-tab" onclick="switchDemo('recovery')" data-zh="恢復度評估" data-en="Recovery Check">恢復度評估</button>
+        <button class="demo-tab" onclick="switchDemo('plan')" data-zh="訓練計劃" data-en="Training Plan">訓練計劃</button>
+    </div>
+
+    <!-- Demo 1: AI Chat -->
+    <div class="demo-panel active" id="demoChat">
+        <div class="phone-mock">
+            <div class="phone-mock-notch"></div>
+            <div class="phone-mock-header">
+                <div class="mock-avatar">🤖</div>
+                <div class="mock-info">
+                    <div class="mock-title" data-zh="DAY 1 AI 教練" data-en="DAY 1 AI Coach">DAY 1 AI 教練</div>
+                    <div class="mock-subtitle" data-zh="在線" data-en="Online">在線</div>
+                </div>
+            </div>
+            <div class="phone-mock-body">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-msg ai" data-zh="嗨！我是你的 AI 訓練教練 👋 今天想了解什麼？" data-en="Hi! I'm your AI training coach 👋 What would you like to know today?">嗨！我是你的 AI 訓練教練 👋 今天想了解什麼？</div>
+                </div>
+            </div>
+            <div class="chat-options" id="chatOptions">
+                <button class="chat-option-btn" onclick="sendChat(0)" data-zh="💪 今天適合練什麼？" data-en="💪 What should I train today?">💪 今天適合練什麼？</button>
+                <button class="chat-option-btn" onclick="sendChat(1)" data-zh="😴 我昨晚睡不好，還能練嗎？" data-en="😴 I slept badly, can I still train?">😴 我昨晚睡不好，還能練嗎？</button>
+                <button class="chat-option-btn" onclick="sendChat(2)" data-zh="🍗 訓練後應該吃什麼？" data-en="🍗 What should I eat after training?">🍗 訓練後應該吃什麼？</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo 2: Recovery -->
+    <div class="demo-panel" id="demoRecovery">
+        <div class="phone-mock">
+            <div class="phone-mock-notch"></div>
+            <div class="phone-mock-header">
+                <div class="mock-avatar">❤️</div>
+                <div class="mock-info">
+                    <div class="mock-title" data-zh="恢復度分析" data-en="Recovery Analysis">恢復度分析</div>
+                    <div class="mock-subtitle" data-zh="基於 HealthKit 數據" data-en="Based on HealthKit data">基於 HealthKit 數據</div>
+                </div>
+            </div>
+            <div class="recovery-body">
+                <div class="recovery-ring">
+                    <svg viewBox="0 0 140 140"><circle class="rr-bg" cx="70" cy="70" r="65"/><circle class="rr-fill" id="rrFill" cx="70" cy="70" r="65"/></svg>
+                    <div class="rr-center"><div class="rr-score" id="rrScore">—</div><div class="rr-label" data-zh="恢復指數" data-en="Recovery">恢復指數</div></div>
+                </div>
+                <div class="recovery-status" id="rrStatus"></div>
+                <div class="recovery-bars" id="rrBars">
+                    <div class="rb-item"><div class="rb-top"><span data-zh="睡眠品質" data-en="Sleep Quality">睡眠品質</span><span class="rb-val">—</span></div><div class="rb-track"><div class="rb-fill" style="background:#F0845A"></div></div></div>
+                    <div class="rb-item"><div class="rb-top"><span data-zh="心率變異 (HRV)" data-en="HRV">心率變異 (HRV)</span><span class="rb-val">—</span></div><div class="rb-track"><div class="rb-fill" style="background:#E84393"></div></div></div>
+                    <div class="rb-item"><div class="rb-top"><span data-zh="靜息心率" data-en="Resting HR">靜息心率</span><span class="rb-val">—</span></div><div class="rb-track"><div class="rb-fill" style="background:#00CED1"></div></div></div>
+                    <div class="rb-item"><div class="rb-top"><span data-zh="訓練負荷" data-en="Training Load">訓練負荷</span><span class="rb-val">—</span></div><div class="rb-track"><div class="rb-fill" style="background:#FDCB6E"></div></div></div>
+                </div>
+                <button class="recovery-btn" id="rrBtn" onclick="runRecovery()" data-zh="開始分析" data-en="Analyse Now">開始分析</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo 3: Training Plan -->
+    <div class="demo-panel" id="demoPlan">
+        <div class="phone-mock">
+            <div class="phone-mock-notch"></div>
+            <div class="phone-mock-header">
+                <div class="mock-avatar">🏋️</div>
+                <div class="mock-info">
+                    <div class="mock-title" data-zh="今日訓練" data-en="Today's Training">今日訓練</div>
+                    <div class="mock-subtitle" data-zh="AI 個人化推薦" data-en="AI Personalised">AI 個人化推薦</div>
+                </div>
+            </div>
+            <div class="plan-body">
+                <div class="plan-goals" id="planGoals">
+                    <button class="plan-goal-btn" onclick="genPlan('muscle')"><span class="g-icon">💪</span><span data-zh="增肌" data-en="Build">增肌</span></button>
+                    <button class="plan-goal-btn" onclick="genPlan('cut')"><span class="g-icon">🔥</span><span data-zh="減脂" data-en="Cut">減脂</span></button>
+                    <button class="plan-goal-btn" onclick="genPlan('maintain')"><span class="g-icon">⚖️</span><span data-zh="保持" data-en="Maintain">保持</span></button>
+                </div>
+                <div class="plan-spinner-wrap" id="planSpinner"><div class="plan-spinner"></div><p data-zh="AI 正在生成你的訓練計劃..." data-en="AI is generating your plan...">AI 正在生成你的訓練計劃...</p></div>
+                <div class="plan-result" id="planResult"></div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -811,6 +971,206 @@ document.querySelectorAll('.feature-card, .step, .phone-frame').forEach(el => {
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
 });
+
+// ===== Interactive Demo =====
+function switchDemo(id) {
+    document.querySelectorAll('.demo-tab').forEach((t,i) => t.classList.toggle('active', ['chat','recovery','plan'][i] === id));
+    document.querySelectorAll('.demo-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('demo' + id.charAt(0).toUpperCase() + id.slice(1)).classList.add('active');
+}
+
+// --- Demo 1: AI Chat ---
+const chatData = [
+    {
+        qZh: '💪 今天適合練什麼？', qEn: '💪 What should I train today?',
+        aZh: '根據你的 HealthKit 數據，你昨晚睡了 7.5 小時，HRV 偏高，恢復狀態良好 🟢\n\n建議今天進行中高強度訓練：\n• 上半身推（臥推 / 肩推）\n• 搭配核心訓練\n• 預計 45-60 分鐘',
+        aEn: 'Based on your HealthKit data, you slept 7.5h last night with high HRV — recovery looks good 🟢\n\nI recommend moderate-high intensity today:\n• Upper body push (bench / OHP)\n• Core work\n• Estimated 45-60 min'
+    },
+    {
+        qZh: '😴 我昨晚睡不好，還能練嗎？', qEn: '😴 I slept badly, can I still train?',
+        aZh: '我看到你昨晚只睡了 5.2 小時，深度睡眠不足，HRV 也偏低 🟡\n\n建議今天降低強度：\n• 輕度有氧（快走 / 瑜伽）\n• 避免大重量訓練\n• 注意補充水分和營養',
+        aEn: 'I see you only slept 5.2h with low deep sleep and lower HRV 🟡\n\nI suggest reducing intensity today:\n• Light cardio (walking / yoga)\n• Avoid heavy lifting\n• Focus on hydration and nutrition'
+    },
+    {
+        qZh: '🍗 訓練後應該吃什麼？', qEn: '🍗 What should I eat after training?',
+        aZh: '訓練後 30 分鐘內建議攝入：\n\n🥩 蛋白質：25-35g（雞胸肉 / 蛋白粉 / 希臘優格）\n🍚 碳水：40-60g（白飯 / 地瓜 / 香蕉）\n💧 水分：至少 500ml\n\n這能幫助肌肉恢復和糖原補充！',
+        aEn: 'Within 30 min post-workout, aim for:\n\n🥩 Protein: 25-35g (chicken / whey / Greek yogurt)\n🍚 Carbs: 40-60g (rice / sweet potato / banana)\n💧 Water: at least 500ml\n\nThis helps muscle recovery and glycogen replenishment!'
+    }
+];
+let chatUsed = [false, false, false];
+const curLang = () => document.documentElement.lang === 'en' ? 'en' : 'zh';
+
+function sendChat(idx) {
+    if (chatUsed[idx]) return;
+    chatUsed[idx] = true;
+    const msgs = document.getElementById('chatMessages');
+    const opts = document.getElementById('chatOptions');
+    const d = chatData[idx];
+    const lang = curLang();
+    const qText = lang === 'en' ? d.qEn : d.qZh;
+    const aText = lang === 'en' ? d.aEn : d.aZh;
+
+    opts.children[idx].disabled = true;
+
+    const userMsg = document.createElement('div');
+    userMsg.className = 'chat-msg user';
+    userMsg.textContent = qText;
+    msgs.appendChild(userMsg);
+
+    const dots = document.createElement('div');
+    dots.className = 'typing-dots';
+    dots.innerHTML = '<span></span><span></span><span></span>';
+    msgs.appendChild(dots);
+    msgs.parentElement.scrollTop = msgs.parentElement.scrollHeight;
+
+    setTimeout(() => {
+        dots.remove();
+        const aiMsg = document.createElement('div');
+        aiMsg.className = 'chat-msg ai';
+        aiMsg.style.whiteSpace = 'pre-line';
+        msgs.appendChild(aiMsg);
+        let ci = 0;
+        const typeIt = () => {
+            if (ci < aText.length) {
+                aiMsg.textContent += aText[ci];
+                ci++;
+                msgs.parentElement.scrollTop = msgs.parentElement.scrollHeight;
+                setTimeout(typeIt, 18);
+            }
+        };
+        typeIt();
+    }, 1200);
+}
+
+// --- Demo 2: Recovery ---
+let recoveryDone = false;
+function runRecovery() {
+    if (recoveryDone) return;
+    recoveryDone = true;
+    const btn = document.getElementById('rrBtn');
+    btn.disabled = true;
+    const lang = curLang();
+    btn.textContent = lang === 'en' ? 'Analysing...' : '分析中...';
+
+    const score = 82;
+    const fill = document.getElementById('rrFill');
+    const scoreEl = document.getElementById('rrScore');
+    const status = document.getElementById('rrStatus');
+    const bars = document.querySelectorAll('#rrBars .rb-item');
+    const barData = [
+        { pct: 78, valZh: '良好', valEn: 'Good' },
+        { pct: 85, valZh: '優秀', valEn: 'Excellent' },
+        { pct: 72, valZh: '正常', valEn: 'Normal' },
+        { pct: 60, valZh: '中等', valEn: 'Moderate' }
+    ];
+
+    setTimeout(() => {
+        const offset = 408 - (408 * score / 100);
+        fill.style.strokeDashoffset = offset;
+        fill.style.stroke = '#00CED1';
+
+        let cur = 0;
+        const countUp = setInterval(() => {
+            cur += 2;
+            if (cur > score) { cur = score; clearInterval(countUp); }
+            scoreEl.textContent = cur;
+            scoreEl.style.color = '#00CED1';
+        }, 25);
+
+        setTimeout(() => {
+            status.textContent = lang === 'en' ? '🟢 Ready to Train' : '🟢 適合訓練';
+            status.style.background = 'rgba(0,206,209,0.12)';
+            status.style.color = '#00CED1';
+            status.classList.add('show');
+        }, 800);
+
+        bars.forEach((bar, i) => {
+            setTimeout(() => {
+                bar.classList.add('show');
+                const valSpan = bar.querySelector('.rb-val');
+                valSpan.textContent = lang === 'en' ? barData[i].valEn : barData[i].valZh;
+                bar.querySelector('.rb-fill').style.width = barData[i].pct + '%';
+            }, 1000 + i * 300);
+        });
+
+        setTimeout(() => {
+            btn.textContent = lang === 'en' ? 'Analysis Complete' : '分析完成';
+        }, 2200);
+    }, 600);
+}
+
+// --- Demo 3: Training Plan ---
+const planDB = {
+    muscle: {
+        titleZh: '上半身推拉日', titleEn: 'Upper Body Push/Pull',
+        metaZh: '預計 55 分鐘 · 中高強度', metaEn: '~55 min · Moderate-High',
+        exercises: [
+            { zh: '槓鈴臥推', en: 'Barbell Bench Press', dZh: '4 組 × 8 次', dEn: '4 sets × 8 reps' },
+            { zh: '啞鈴肩推', en: 'Dumbbell OHP', dZh: '3 組 × 10 次', dEn: '3 sets × 10 reps' },
+            { zh: '引體向上', en: 'Pull-ups', dZh: '3 組 × 力竭', dEn: '3 sets × to failure' },
+            { zh: '繩索飛鳥', en: 'Cable Fly', dZh: '3 組 × 12 次', dEn: '3 sets × 12 reps' },
+            { zh: '平板支撐', en: 'Plank', dZh: '3 組 × 45 秒', dEn: '3 sets × 45s' }
+        ]
+    },
+    cut: {
+        titleZh: 'HIIT 燃脂訓練', titleEn: 'HIIT Fat Burn',
+        metaZh: '預計 35 分鐘 · 高強度', metaEn: '~35 min · High Intensity',
+        exercises: [
+            { zh: '波比跳', en: 'Burpees', dZh: '4 組 × 12 次', dEn: '4 sets × 12 reps' },
+            { zh: '壺鈴擺盪', en: 'Kettlebell Swing', dZh: '4 組 × 15 次', dEn: '4 sets × 15 reps' },
+            { zh: '登山者', en: 'Mountain Climbers', dZh: '3 組 × 30 秒', dEn: '3 sets × 30s' },
+            { zh: '跳繩', en: 'Jump Rope', dZh: '3 組 × 60 秒', dEn: '3 sets × 60s' },
+            { zh: '俄羅斯轉體', en: 'Russian Twist', dZh: '3 組 × 20 次', dEn: '3 sets × 20 reps' }
+        ]
+    },
+    maintain: {
+        titleZh: '全身均衡訓練', titleEn: 'Full Body Balance',
+        metaZh: '預計 45 分鐘 · 中等強度', metaEn: '~45 min · Moderate',
+        exercises: [
+            { zh: '深蹲', en: 'Squats', dZh: '3 組 × 10 次', dEn: '3 sets × 10 reps' },
+            { zh: '伏地挺身', en: 'Push-ups', dZh: '3 組 × 15 次', dEn: '3 sets × 15 reps' },
+            { zh: '啞鈴划船', en: 'Dumbbell Row', dZh: '3 組 × 12 次', dEn: '3 sets × 12 reps' },
+            { zh: '弓箭步', en: 'Lunges', dZh: '3 組 × 10 次/邊', dEn: '3 sets × 10/side' },
+            { zh: '死蟲式', en: 'Dead Bug', dZh: '3 組 × 12 次', dEn: '3 sets × 12 reps' }
+        ]
+    }
+};
+let planActive = null;
+function genPlan(type) {
+    if (planActive === type) return;
+    planActive = type;
+    const lang = curLang();
+    const goals = document.querySelectorAll('#planGoals .plan-goal-btn');
+    goals.forEach(g => g.classList.remove('active'));
+    const idx = { muscle: 0, cut: 1, maintain: 2 }[type];
+    goals[idx].classList.add('active');
+
+    const spinner = document.getElementById('planSpinner');
+    const result = document.getElementById('planResult');
+    result.classList.remove('show');
+    result.innerHTML = '';
+    spinner.classList.add('show');
+
+    setTimeout(() => {
+        spinner.classList.remove('show');
+        const p = planDB[type];
+        const dayLabel = lang === 'en' ? "TODAY'S PLAN" : '今日計劃';
+        const title = lang === 'en' ? p.titleEn : p.titleZh;
+        const meta = lang === 'en' ? p.metaEn : p.metaZh;
+        let html = '<div class="plan-card"><div class="pc-day">' + dayLabel + '</div><div class="pc-title">' + title + '</div><div class="pc-meta">' + meta + '</div></div><div class="plan-exercises">';
+        p.exercises.forEach((ex, i) => {
+            const name = lang === 'en' ? ex.en : ex.zh;
+            const detail = lang === 'en' ? ex.dEn : ex.dZh;
+            html += '<div class="plan-ex" style="transition-delay:' + (i * 0.1) + 's"><div class="plan-ex-num">' + (i + 1) + '</div><div><div class="plan-ex-name">' + name + '</div><div class="plan-ex-detail">' + detail + '</div></div></div>';
+        });
+        html += '</div>';
+        result.innerHTML = html;
+        result.classList.add('show');
+        setTimeout(() => {
+            result.querySelectorAll('.plan-ex').forEach(ex => ex.classList.add('show'));
+        }, 50);
+    }, 1500);
+}
 </script>
 </body>
 </html>
