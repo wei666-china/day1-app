@@ -43,12 +43,24 @@
             padding-bottom: 8px;
             border-bottom: 1px solid rgba(255,255,255,0.06);
         }
+        .content h3 {
+            font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.9);
+            margin-top: 20px; margin-bottom: 8px;
+        }
         .content p { margin-bottom: 12px; color: rgba(255,255,255,0.65); }
         .content ul { margin: 8px 0 12px 20px; color: rgba(255,255,255,0.6); }
         .content ul li { margin-bottom: 4px; }
         .content .warning {
             background: rgba(253,121,168,0.08);
             border-left: 3px solid #FD79A8;
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+        .content .highlight {
+            background: rgba(108,92,231,0.08);
+            border-left: 3px solid #6C5CE7;
             padding: 12px 16px;
             border-radius: 0 8px 8px 0;
             margin: 12px 0;
@@ -82,150 +94,288 @@
 <!-- 中文版 -->
 <div class="content" id="content-zh">
 <h1>用戶服務協議</h1>
-<p class="meta">生效日期：2025 年 2 月 1 日 ｜ 最後更新：2026 年 2 月</p>
+<p class="meta">生效日期：2025 年 2 月 1 日 ｜ 最後更新：2026 年 3 月</p>
 <p>歡迎使用 DAY 1（以下簡稱「本應用」）。本應用由獨立開發者 Liu Azure（以下簡稱「我們」或「開發者」）開發和營運。</p>
-<p>請您在使用本應用前，務必審慎閱讀並充分理解本協議的全部條款，特別是涉及免責聲明、責任限制、爭議解決等條款。當您點擊「同意」或開始使用本應用時，即表示您同意受本協議約束。</p>
+<p>請您在使用本應用前，務必審慎閱讀並充分理解本《用戶服務協議》（以下簡稱「本協議」）的全部條款，特別是涉及免責聲明、責任限制、爭議解決等條款。當您點擊「同意」按鈕或以其他任何方式開始使用本應用時，即表示您已閱讀、理解並同意受本協議全部條款的約束。如您不同意本協議的任何條款，請立即停止使用本應用。</p>
 
 <h2>一、服務概述與性質聲明</h2>
-<p>1.1 本應用是一款面向個人用戶的健身訓練輔助工具，提供訓練計劃制定、飲食建議、健康數據分析及 AI 對話建議等功能。</p>
+<p>1.1 本應用是一款面向個人用戶的健身訓練輔助工具，提供訓練計劃制定、飲食建議、健康數據分析及 AI 對話建議等功能服務。本應用需登入後方可使用。</p>
 <div class="warning">
 <strong>1.2 重要聲明——非醫療服務：</strong><br>
 (a) 本應用提供的所有訓練計劃、飲食建議、健康數據分析及 AI 對話建議均僅為輔助參考資訊，不構成任何形式的醫療建議、醫學診斷或治療方案。<br>
-(b) 本應用不是醫療器械，不具備醫療診斷功能。任何資訊不能替代持牌醫療專業人員的意見。<br>
-(c) 本應用基於用戶自行提供的資料以及可穿戴裝置採集的數據生成建議，可能存在測量誤差。
+(b) 本應用不是醫療器械，不具備醫療診斷功能。本應用提供的任何資訊、建議或分析結果均不能替代持牌醫療專業人員的意見、診斷或治療。<br>
+(c) 本應用基於用戶自行提供的資料以及 Apple Watch 等可穿戴裝置採集的數據生成建議。上述數據來源可能存在測量誤差或偏差，不能替代專業醫療機構的檢測和評估。
 </div>
-<p>1.3 如本應用提供的建議與醫療專業人員的意見不一致，您應以醫療專業人員的意見為準。</p>
+<p>1.3 在任何情況下，如果本應用提供的建議與醫療專業人員的意見不一致，您應以醫療專業人員的意見為準。</p>
 
 <h2>二、運動風險告知與確認</h2>
 <div class="warning">
-<strong>2.1 您知悉並確認：體育運動本身存在固有且不可完全消除的風險。</strong>包括但不限於：肌肉拉傷、韌帶撕裂、關節扭傷、骨折、心血管意外事件（包括心律失常、心肌梗塞、心臟驟停甚至猝死）、橫紋肌溶解症、脫水、中暑等。
+<strong>2.1 您知悉並確認：體育運動本身存在固有且不可完全消除的風險。</strong>這些風險包括但不限於：
+<ul>
+    <li>肌肉拉傷、韌帶撕裂、肌腱損傷</li>
+    <li>關節扭傷、脫臼</li>
+    <li>骨折或應力性骨折</li>
+    <li>心血管意外事件，包括但不限於心律失常、心肌梗塞、心臟驟停甚至猝死</li>
+    <li>橫紋肌溶解症</li>
+    <li>脫水、中暑或低體溫症</li>
+    <li>其他可能導致人身傷害或危及生命的情況</li>
+</ul>
 </div>
-<p>2.2 您應充分評估自身身體條件，自主、謹慎地選擇適合的訓練內容和強度。</p>
-<p>2.3 運動過程中如出現胸悶、胸痛、頭暈、心悸、呼吸困難、劇烈疼痛等任何異常症狀，應立即停止運動並及時就醫。</p>
+<p>2.2 您應當充分評估自身的身體條件和運動能力，自主、謹慎地選擇適合自身情況的訓練內容和運動強度。</p>
+<p>2.3 在運動過程中，如出現胸悶、胸痛、頭暈、心悸、呼吸困難、劇烈疼痛、噁心嘔吐、視覺異常等任何異常症狀，您應當立即停止運動並及時就醫。</p>
 
 <h2>三、健康前提條款</h2>
-<p>3.1 使用本應用前，您應確認自身健康狀況允許進行體育鍛煉。</p>
-<p>3.2 如您患有心臟疾病、高血壓、糖尿病、骨質疏鬆、關節疾病、哮喘、癲癇、貧血等，應先取得醫生的運動許可。</p>
-<p>3.3 <strong>50 歲及以上用戶</strong>：強烈建議運動前諮詢醫生。</p>
-<p>3.4 <strong>孕期及產後用戶</strong>：應僅在醫生許可下使用訓練功能。</p>
-<p>3.5 <strong>未成年人</strong>：未滿 18 歲須在監護人知情同意下使用。</p>
+<p>3.1 在使用本應用之前，您應確認自身健康狀況允許進行體育鍛煉。如對自身健康狀況存有疑慮，請在使用本應用前諮詢醫生。</p>
+<p>3.2 如您當前患有或曾經患有以下任何疾病或身體狀況，應在使用本應用前取得具有執業資格的醫生出具的運動許可或醫學建議：各類心臟疾病、高血壓或低血壓、糖尿病、骨質疏鬆、關節疾病、哮喘、癲癇、貧血等。</p>
+<p>3.3 <strong>50 歲及以上用戶</strong>：無論是否存在已知健康問題，我們強烈建議您在開始任何運動計劃前諮詢醫生，並定期進行健康體檢。本應用將自動為您啟用保守安全模式。</p>
+<p>3.4 <strong>孕期及產後用戶</strong>：處於妊娠期或疑似懷孕的用戶，以及產後六個月內的用戶，應僅在醫生明確許可和指導下使用本應用的訓練功能。</p>
+<p>3.5 <strong>未成年人</strong>：16 至 18 歲的未成年人須在其父母或法定監護人知情同意並適當監護下方可使用本應用。16 歲以下不可使用。</p>
 
-<h2>四、責任限制與免責條款</h2>
+<h2>四、AI 功能使用條款與免責聲明</h2>
+<h3>4.1 AI 生成內容的性質</h3>
+<p>本應用中的 AI 功能（包括 AI 對話、AI 食物識別、訓練準備度評估等）由人工智能演算法自動生成內容。您知悉並同意：</p>
 <div class="warning">
-<strong>4.1 在適用法律允許的最大範圍內</strong>，對以下情形導致的傷害或損失，我們不承擔法律責任：(a) 未如實填報健康狀況；(b) 忽視安全警告；(c) 不適宜狀態下訓練；(d) 超出身體能力的訓練。
+(a) AI 生成的內容可能不完全準確，可能包含錯誤、遺漏或不適用於您個人情況的資訊。<br>
+(b) AI 生成的內容不構成專業的醫療、營養、運動或健康指導，不能替代持牌醫療或健康專業人員的意見。<br>
+(c) 您不應將 AI 建議作為唯一決策依據，應始終結合自身實際情況獨立判斷。
 </div>
-<div class="warning">
-<strong>4.2 AI 建議</strong>由人工智能演算法自動生成，可能存在不準確或不適用的情況。用戶應獨立判斷，不應作為唯一決策依據。
-</div>
-<p>4.3-4.5 因設備數據誤差、不可抗力等導致的問題，以及任何間接損失，我們在法律允許範圍內不承擔責任。</p>
 
-<h2>五、用戶義務</h2>
+<h3>4.2 AI 食物識別免責</h3>
+<div class="warning">
+AI 食物識別功能所提供的營養數據（熱量、蛋白質、碳水化合物、脂肪等）為估算值：<br>
+(a) 估算結果可能存在誤差，不適用於醫療飲食需求或嚴格的營養管理。<br>
+(b) 如您有食物過敏史，請在食用前自行核實過敏原，AI 識別結果不涵蓋過敏原檢測。
+</div>
+
+<h3>4.3 訓練準備度評估免責</h3>
+<div class="warning">
+訓練準備度評估（綠燈/黃燈/橙燈/紅燈系統）基於有限的健康數據分析：<br>
+(a) 評估結果僅供參考，不構成健康評估或運動處方。<br>
+(b) 即使系統顯示「綠燈」，如您感到不適，仍應停止訓練並就醫。
+</div>
+
+<h3>4.4 AI 數據處理</h3>
+<p>使用 AI 功能時，您的去標識化數據將通過我們的安全中繼服務發送至阿里雲新加坡節點進行處理，用於提供當次 AI 服務。經您同意，聚合後的去標識化數據亦可能用於持續改善 AI 模型質量。數據不會傳輸至中國大陸。詳細數據處理說明請參閱我們的<a href="privacy.html">私隱政策</a>。</p>
+
+<h3>4.5 禁止輸入他人資訊</h3>
+<p>您不得向 AI 功能輸入任何他人的敏感個人資訊（包括但不限於健康數據、身份證號、財務資訊）。因違反本條規定而產生的一切後果由您自行承擔。</p>
+
+<h3>4.6 免責範圍</h3>
+<div class="warning">
+<strong>在香港特別行政區法律允許的最大範圍內，我們對因用戶依賴 AI 生成內容而導致的任何損失、傷害或不利後果不承擔責任。</strong>
+</div>
+
+<h2>五、責任限制與免責條款</h2>
+<div class="warning">
+<strong>5.1 在適用法律允許的最大範圍內</strong>，對以下情形導致的任何直接或間接的人身傷害、健康損害、財產損失或其他不利後果，我們不承擔法律責任：<br>
+(a) 用戶未如實、完整、準確地填報健康狀況或隱瞞相關病史；<br>
+(b) 用戶忽視、無視或違反本應用內發出的安全警告、風險提示或注意事項；<br>
+(c) 用戶在不適宜運動的身體狀態下進行訓練；<br>
+(d) 用戶自行選擇超出其當前身體能力或醫囑限制的訓練方案或運動強度。
+</div>
+<p>5.2 因 Apple Watch 或其他可穿戴裝置的數據採集誤差、傳輸延遲、系統故障等技術原因導致的建議偏差，我們不承擔責任。</p>
+<p>5.3 因不可抗力導致服務中斷或數據損失，我們不承擔責任。</p>
+<div class="warning">
+<strong>5.4 在適用法律允許的最大範圍內，我們對因使用或無法使用本應用而產生的任何間接損失、附帶損失、懲罰性賠償或特殊損失不承擔責任。</strong><br><br>
+<strong>5.5 本協議中的任何條款均不排除或限制因我們的重大過失或故意行為導致的人身傷害或死亡的責任。</strong>
+</div>
+
+<h2>六、用戶義務與行為規範</h2>
 <ul>
     <li>如實填寫並及時更新個人資料</li>
     <li>每次訓練前充分熱身，遵守安全警告</li>
     <li>循序漸進增加強度，不適時立即停止</li>
+    <li>確保訓練環境安全，使用合適的運動裝備</li>
     <li>定期健康體檢（尤其 50 歲以上用戶）</li>
     <li>遵守適用法律法規</li>
 </ul>
 
-<h2>六、知識產權</h2>
-<p>本應用的所有內容之知識產權歸我們所有。您獲得有限的、非排他性的、不可轉讓的許可，僅供個人使用。</p>
+<h2>七、知識產權</h2>
+<p>本應用的所有內容之知識產權歸我們所有或已獲得合法授權。您獲得有限的、非排他性的、不可轉讓的、可撤銷的許可，僅供個人在 iOS 裝置上使用。</p>
 
-<h2>七、數據說明</h2>
-<p>詳見我們的<a href="privacy.html">私隱政策</a>。用戶數據僅存儲在本地裝置。您可隨時管理或通過卸載刪除全部數據。</p>
+<h2>八、數據說明</h2>
+<p>8.1 本應用對用戶數據的收集、使用、儲存和保護，請詳見我們的<a href="privacy.html">私隱政策</a>。《私隱政策》構成本協議不可分割的組成部分。</p>
+<p>8.2 本應用需要登入後使用。登入後，您的數據將自動加密同步至我們的伺服器（詳見雲端資料同步服務條款）。同時，數據也保存在您的本地裝置上。</p>
+<p>8.3 使用 AI 對話功能時傳送的上下文資訊，僅用於生成個人化建議，不會用於其他任何目的。</p>
+<p>8.4 您可在應用內「設定」中查看和管理自己的數據。</p>
 
-<h2>八、服務變更與終止</h2>
-<p>我們可能對功能進行變更、升級或調整，並將盡合理努力提前通知。</p>
+<h2>九、服務的變更、中斷與終止</h2>
+<p>9.1 我們有權對本應用的功能或服務內容進行變更、升級或調整，並將盡合理努力提前通知用戶。</p>
+<p>9.2 如遇裝置故障、系統維護、網絡問題或其他不可控因素，服務可能暫時中斷。</p>
+<p>9.3 我們有權在提前通知用戶後終止本應用的營運。終止營運前，我們將為用戶預留合理的數據導出時間。</p>
 
-<h2>九、協議變更</h2>
-<p>實質性變更時將通過應用內彈窗通知。繼續使用即視為接受。</p>
+<h2>十、協議變更</h2>
+<p>10.1 我們保留隨時修改本協議的權利。當協議發生實質性變更時，我們將透過應用內彈窗或其他顯著方式通知您。</p>
+<p>10.2 變更後的協議一經公佈即生效。繼續使用即視為接受。如您不同意，應立即停止使用。</p>
 
-<h2>十、適用法律與爭議解決</h2>
-<p>10.1 本協議適用香港特別行政區法律。</p>
-<p>10.2 爭議應首先友好協商，協商不成的提交香港具管轄權的法院解決。</p>
+<h2>十一、適用法律與爭議解決</h2>
+<p>11.1 本協議的訂立、生效、履行、解釋及爭議的解決均適用香港特別行政區法律。</p>
+<p>11.2 因本協議引起的爭議，雙方應首先透過友好協商解決。協商不成的，任何一方均有權將爭議提交至香港特別行政區具有管轄權的法院解決。</p>
 
-<h2>十一、其他條款</h2>
-<p>可分割性、完整協議及權利保留等標準條款適用。</p>
+<h2>雲端資料同步服務</h2>
+<p>登入本應用後，您的資料將通過加密傳輸自動同步至我們的伺服器（託管於 Supabase，新加坡區域），用於跨裝置同步與資料恢復。在首次進入主介面前，您將看到雲端資料同步說明頁面並需確認了解。</p>
+<ul>
+    <li>同步的資料包括：訓練計劃與歷史記錄、體重與體脂記錄、飲食記錄、AI 聊天記錄與 AI 記憶、每日狀態記錄、營養目標、自訂動作等</li>
+    <li>以下資料不會上傳至伺服器：生理週期資料、健康狀況自查資訊。HealthKit 原始資料（體溫、睡眠階段、步數）不會上傳</li>
+    <li>資料通過 HTTPS/TLS 加密傳輸並加密儲存</li>
+    <li>如需刪除您的雲端資料，可透過應用內「設定」中的「刪除全部資料」功能申請。提交後資料將進入刪除流程並盡快從伺服器清除</li>
+    <li>我們對因伺服器基礎設施中斷或故障所造成的損失不承擔責任，但會盡最大努力保障服務可用性</li>
+</ul>
 
-<h2>十二、聯絡方式</h2>
+<h2>十二、其他條款</h2>
+<p>12.1 可分割性：如本協議中的任何條款被認定為無效或不可執行，本協議其餘條款的效力不受影響。</p>
+<p>12.2 完整協議：本協議（包括《私隱政策》）構成您與我們之間就使用本應用達成的完整協議。</p>
+<p>12.3 權利保留：我們未行使或延遲行使本協議項下的任何權利，不構成對該權利的放棄。</p>
+
+<h2>十三、聯絡方式</h2>
 <p>獨立開發者：Liu Azure<br>
-電郵：<a href="mailto:weilliamyaojiay@gmail.com">weilliamyaojiay@gmail.com</a></p>
+聯絡電郵：<a href="mailto:foraiandfocus@gmail.com">foraiandfocus@gmail.com</a><br>
+應用內反饋功能</p>
 </div>
 
 <!-- English Version -->
 <div class="content" id="content-en" style="display:none;">
 <h1>Terms of Service</h1>
-<p class="meta">Effective Date: 1 February 2025 ｜ Last Updated: February 2026</p>
+<p class="meta">Effective Date: 1 February 2025 ｜ Last Updated: March 2026</p>
 <p>Welcome to DAY 1 ("the App"). The App is developed and operated by independent developer Liu Azure ("we," "our," or "us").</p>
-<p>Please carefully read and fully understand all provisions of these Terms before using the App, with particular attention to disclaimers, limitation of liability, and dispute resolution. By tapping "Agree" or otherwise using the App, you agree to be bound by these Terms.</p>
+<p>Please carefully read and fully understand all provisions of these Terms of Service ("Terms") before using the App, with particular attention to the sections regarding disclaimers, limitation of liability, and dispute resolution. By tapping "Agree" or otherwise beginning to use the App, you acknowledge that you have read, understood, and agree to be bound by all provisions of these Terms. If you do not agree to any provision of these Terms, please discontinue use of the App immediately.</p>
 
-<h2>1. Service Overview</h2>
-<p>1.1 The App is a personal fitness training tool providing workout planning, dietary guidance, health data analysis, and AI-powered recommendations.</p>
+<h2>1. Service Overview and Nature of Service</h2>
+<p>1.1 The App is a personal fitness training assistance tool that provides workout planning, dietary guidance, health data analysis, and AI-powered conversation recommendations. Login is required to use the App.</p>
 <div class="warning">
-<strong>1.2 IMPORTANT — NOT A MEDICAL SERVICE:</strong><br>
-(a) All training plans, dietary suggestions, health data analyses, and AI recommendations are supplementary reference information only and do not constitute medical advice.<br>
-(b) This App is not a medical device. No information provided can replace professional medical opinion.<br>
-(c) Recommendations are based on user-provided information and wearable device data, which may contain measurement errors.
+<strong>1.2 IMPORTANT NOTICE — NOT A MEDICAL SERVICE:</strong><br>
+(a) All training plans, dietary suggestions, health data analyses, and AI conversation recommendations provided by this App are supplementary reference information only and do not constitute medical advice, medical diagnosis, or treatment plans of any kind.<br>
+(b) This App is not a medical device and does not possess medical diagnostic capabilities. No information, recommendation, or analysis provided by this App can replace the opinion, diagnosis, or treatment of a licensed healthcare professional.<br>
+(c) This App generates recommendations based on information provided by you and data collected by wearable devices such as Apple Watch. These data sources may contain measurement errors or inaccuracies and cannot substitute for professional medical examinations and assessments.
 </div>
-<p>1.3 If App recommendations conflict with your healthcare provider's advice, follow your healthcare provider.</p>
+<p>1.3 In all circumstances, if recommendations provided by this App conflict with the advice of your healthcare provider, you should follow the advice of your healthcare provider.</p>
 
-<h2>2. Exercise Risk Disclosure</h2>
+<h2>2. Exercise Risk Disclosure and Acknowledgment</h2>
 <div class="warning">
-<strong>2.1 You acknowledge that physical exercise carries inherent risks</strong> including but not limited to: muscle strains, ligament tears, joint sprains, fractures, cardiovascular events (arrhythmia, myocardial infarction, cardiac arrest, sudden death), rhabdomyolysis, dehydration, and heat stroke.
+<strong>2.1 You acknowledge and confirm that physical exercise carries inherent risks that cannot be entirely eliminated.</strong> These risks include, but are not limited to:
+<ul>
+    <li>Muscle strains, ligament tears, tendon injuries</li>
+    <li>Joint sprains and dislocations</li>
+    <li>Bone fractures or stress fractures</li>
+    <li>Cardiovascular events, including arrhythmia, myocardial infarction, cardiac arrest, and sudden death</li>
+    <li>Rhabdomyolysis</li>
+    <li>Dehydration, heat stroke, or hypothermia</li>
+    <li>Other circumstances that may result in personal injury or life-threatening conditions</li>
+</ul>
 </div>
-<p>2.2 You should evaluate your physical condition and prudently select appropriate training.</p>
-<p>2.3 If you experience chest pain, dizziness, palpitations, breathing difficulty, severe pain, or any abnormal symptoms during exercise, stop immediately and seek medical attention.</p>
+<p>2.2 You should thoroughly evaluate your own physical condition and exercise capacity, and independently and prudently select training content and exercise intensity appropriate for your circumstances.</p>
+<p>2.3 During exercise, if you experience chest tightness, chest pain, dizziness, palpitations, breathing difficulty, severe pain, nausea, visual disturbances, or any other abnormal symptoms, you must immediately stop exercising and seek medical attention.</p>
 
 <h2>3. Health Prerequisites</h2>
-<p>3.1 Confirm your health permits exercise before using the App.</p>
-<p>3.2 If you have cardiovascular disease, hypertension, diabetes, osteoporosis, joint disease, asthma, epilepsy, anaemia, or other conditions, obtain medical clearance first.</p>
-<p>3.3 <strong>Users aged 50+:</strong> Strongly recommended to consult a physician before starting.</p>
-<p>3.4 <strong>Pregnant/postpartum users:</strong> Use training features only with medical clearance.</p>
-<p>3.5 <strong>Minors:</strong> Users under 18 require parental consent and supervision.</p>
+<p>3.1 Before using this App, you should confirm that your health condition permits physical exercise. If you have any doubts, consult a physician before using this App.</p>
+<p>3.2 If you currently have or have previously been diagnosed with cardiovascular diseases, hypertension, diabetes, osteoporosis, joint disease, asthma, epilepsy, anaemia, or other conditions that may affect exercise safety, you should obtain exercise clearance from a licensed physician before using this App.</p>
+<p>3.3 <strong>Users Aged 50+:</strong> We strongly recommend consulting a physician before beginning any exercise programme and undergoing regular health check-ups. The App will automatically enable conservative safety mode for you.</p>
+<p>3.4 <strong>Pregnancy and Postpartum:</strong> Users who are pregnant or within six months postpartum should use training features only with explicit medical clearance.</p>
+<p>3.5 <strong>Minors:</strong> Users aged 16 to 18 require parental consent and supervision. Users under 16 are prohibited from using the App.</p>
 
-<h2>4. Limitation of Liability</h2>
+<h2>4. AI Feature Terms and Disclaimers</h2>
+<h3>4.1 Nature of AI-Generated Content</h3>
+<p>The AI features in the App (including AI conversations, AI food recognition, and training readiness assessment) generate content automatically using artificial intelligence algorithms. You acknowledge and agree:</p>
 <div class="warning">
-<strong>4.1 TO THE MAXIMUM EXTENT PERMITTED BY LAW</strong>, we are not liable for injury or loss arising from: (a) inaccurate health reporting; (b) ignoring safety warnings; (c) exercising in unsuitable condition; (d) exceeding physical capabilities.
+(a) AI-generated content may not be fully accurate and may contain errors, omissions, or information not applicable to your individual circumstances.<br>
+(b) AI-generated content does not constitute professional medical, nutritional, exercise, or health guidance and cannot substitute for the advice of licensed professionals.<br>
+(c) You should not rely on AI recommendations as the sole basis for decision-making and should always exercise independent judgement.
 </div>
-<div class="warning">
-<strong>4.2 AI recommendations</strong> are automatically generated and may be inaccurate or unsuitable. Always exercise independent judgement.
-</div>
-<p>4.3-4.5 We are not liable for device data errors, force majeure events, or any indirect/consequential damages to the maximum extent permitted by law.</p>
 
-<h2>5. User Obligations</h2>
+<h3>4.2 AI Food Recognition Disclaimer</h3>
+<div class="warning">
+Nutritional data provided by the AI food recognition feature (calories, protein, carbohydrates, fat, etc.) are estimates:<br>
+(a) Estimates may contain inaccuracies and are not suitable for medical dietary requirements or strict nutritional management.<br>
+(b) If you have a food allergy history, please independently verify allergens before consumption. AI recognition does not include allergen detection.
+</div>
+
+<h3>4.3 Training Readiness Assessment Disclaimer</h3>
+<div class="warning">
+The training readiness assessment (green/yellow/orange/red light system) is based on limited health data analysis:<br>
+(a) Assessment results are for reference only and do not constitute a health evaluation or exercise prescription.<br>
+(b) Even if the system shows a "green light", if you feel unwell, you should stop training and seek medical attention.
+</div>
+
+<h3>4.4 AI Data Processing</h3>
+<p>When using AI features, your de-identified data is sent through our secure relay service to Alibaba Cloud's Singapore node for processing, to provide the current AI service. With your consent, aggregated de-identified data may also be used to continuously improve AI model quality. Data will not be transmitted to mainland China. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+
+<h3>4.5 Prohibited AI Inputs</h3>
+<p>You shall not input any other person's sensitive personal information into the AI features. You are solely responsible for any consequences arising from violation of this provision.</p>
+
+<h3>4.6 Limitation of AI Liability</h3>
+<div class="warning">
+<strong>To the maximum extent permitted by the laws of the Hong Kong SAR, we shall not be liable for any loss, injury, or adverse consequence arising from a user's reliance on AI-generated content.</strong>
+</div>
+
+<h2>5. Limitation of Liability and Disclaimers</h2>
+<div class="warning">
+<strong>5.1 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW</strong>, we shall not be liable for any direct or indirect personal injury, health damage, property loss, or other adverse consequences arising from:<br>
+(a) Inaccurate health reporting or concealment of medical history;<br>
+(b) Disregard for safety warnings within the App;<br>
+(c) Exercising while in an unsuitable physical condition;<br>
+(d) Selecting training exceeding your physical capabilities or medical restrictions.
+</div>
+<p>5.2 We shall not be liable for recommendation deviations caused by device data errors, transmission delays, or system malfunctions.</p>
+<p>5.3 We shall not be liable for service interruptions or data loss caused by force majeure events.</p>
+<div class="warning">
+<strong>5.4 We shall not be liable for any indirect, incidental, punitive, or consequential damages.</strong><br><br>
+<strong>5.5 Nothing in these Terms excludes or limits our liability for personal injury or death caused by our gross negligence or wilful misconduct.</strong>
+</div>
+
+<h2>6. User Obligations</h2>
 <ul>
     <li>Provide and maintain accurate personal information</li>
     <li>Warm up before training and follow safety warnings</li>
     <li>Increase intensity progressively; stop if unwell</li>
+    <li>Ensure a safe training environment with appropriate equipment</li>
     <li>Regular health check-ups (especially users aged 50+)</li>
     <li>Comply with all applicable laws</li>
 </ul>
 
-<h2>6. Intellectual Property</h2>
-<p>All App content is owned by us. You receive a limited, non-exclusive, non-transferable, revocable licence for personal use only.</p>
+<h2>7. Intellectual Property</h2>
+<p>All App content is owned by us or duly licensed. You receive a limited, non-exclusive, non-transferable, revocable licence for personal use on your iOS device only.</p>
 
-<h2>7. Data Practices</h2>
-<p>See our <a href="privacy.html">Privacy Policy</a>. User data is stored locally only. You may manage or delete all data by uninstalling.</p>
+<h2>8. Data Practices</h2>
+<p>8.1 For information about how we collect, use, store, and protect your data, please refer to our <a href="privacy.html">Privacy Policy</a>, which forms an integral part of these Terms.</p>
+<p>8.2 Login is required. After logging in, your data is automatically encrypted and synced to our servers (see Cloud Data Sync Service below). Data is also retained on your local device.</p>
+<p>8.3 Context information transmitted during AI conversations is used exclusively for generating personalised recommendations.</p>
+<p>8.4 You may view and manage your data through the "Settings" section within the App.</p>
 
-<h2>8. Service Changes</h2>
-<p>We may modify, upgrade, or adjust features with reasonable advance notice.</p>
+<h2>9. Service Changes, Interruption, and Termination</h2>
+<p>9.1 We may modify, upgrade, or adjust features with reasonable advance notice.</p>
+<p>9.2 Services may be temporarily interrupted due to maintenance, network issues, or other factors beyond our control.</p>
+<p>9.3 We reserve the right to discontinue the App with prior notice and a reasonable data export period.</p>
 
-<h2>9. Modifications to Terms</h2>
-<p>Material changes notified via in-app pop-up. Continued use constitutes acceptance.</p>
+<h2>10. Modifications to These Terms</h2>
+<p>10.1 We reserve the right to modify these Terms at any time. Material changes will be notified via in-app pop-up.</p>
+<p>10.2 Modified Terms take effect upon publication. Continued use constitutes acceptance.</p>
 
-<h2>10. Governing Law</h2>
-<p>10.1 These Terms are governed by the laws of the Hong Kong SAR.</p>
-<p>10.2 Disputes shall first be resolved by negotiation; failing which, submitted to the courts of Hong Kong.</p>
+<h2>11. Governing Law and Dispute Resolution</h2>
+<p>11.1 These Terms are governed by the laws of the Hong Kong SAR.</p>
+<p>11.2 Disputes shall first be resolved by negotiation; failing which, submitted to the courts of competent jurisdiction in Hong Kong.</p>
 
-<h2>11. Miscellaneous</h2>
-<p>Standard provisions regarding severability, entire agreement, and reservation of rights apply.</p>
+<h2>Cloud Data Sync Service</h2>
+<p>After logging in, your data is automatically encrypted and synced to our servers (hosted on Supabase, Singapore region) for cross-device synchronisation and data recovery.</p>
+<ul>
+    <li>Data synced includes: training plans and history, weight and body fat records, food records, AI chat history and AI memory, daily status check-ins, nutrition goals, custom exercises, etc.</li>
+    <li>Data NOT synced: menstrual cycle data, health condition self-assessments, HealthKit raw data (body temperature, sleep stages, step counts)</li>
+    <li>All data transmitted via HTTPS/TLS encryption and stored encrypted</li>
+    <li>To delete your cloud data, use the "Delete All Data" feature in Settings</li>
+    <li>We are not liable for loss caused by server infrastructure interruptions, but will make best efforts to ensure availability</li>
+</ul>
 
-<h2>12. Contact Us</h2>
+<h2>12. Miscellaneous Provisions</h2>
+<p>12.1 Severability: If any provision is found invalid, the remaining provisions remain in full force.</p>
+<p>12.2 Entire Agreement: These Terms (including the Privacy Policy) constitute the entire agreement between you and us.</p>
+<p>12.3 No Waiver: Failure to exercise any right shall not constitute a waiver.</p>
+
+<h2>13. Contact Us</h2>
 <p>Independent Developer: Liu Azure<br>
-Email: <a href="mailto:weilliamyaojiay@gmail.com">weilliamyaojiay@gmail.com</a></p>
+Email: <a href="mailto:foraiandfocus@gmail.com">foraiandfocus@gmail.com</a><br>
+In-app feedback feature</p>
 </div>
 
-<footer>&copy; 2025 DAY 1. All rights reserved.</footer>
+<footer>&copy; 2025–2026 DAY 1. All rights reserved.</footer>
 
 <script>
 function switchLang(lang) {

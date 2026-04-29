@@ -35,14 +35,8 @@
             max-width: 760px; margin: 0 auto; padding: 20px 24px 80px;
             line-height: 1.8; font-size: 14px;
         }
-        .content h1 {
-            font-size: 28px; font-weight: 700; color: #fff;
-            margin-bottom: 8px;
-        }
-        .content .meta {
-            font-size: 13px; color: rgba(255,255,255,0.35);
-            margin-bottom: 32px;
-        }
+        .content h1 { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+        .content .meta { font-size: 13px; color: rgba(255,255,255,0.35); margin-bottom: 32px; }
         .content h2 {
             font-size: 18px; font-weight: 600; color: #fff;
             margin-top: 36px; margin-bottom: 12px;
@@ -54,14 +48,19 @@
             margin-top: 20px; margin-bottom: 8px;
         }
         .content p { margin-bottom: 12px; color: rgba(255,255,255,0.65); }
-        .content ul {
-            margin: 8px 0 12px 20px;
-            color: rgba(255,255,255,0.6);
-        }
+        .content ul { margin: 8px 0 12px 20px; color: rgba(255,255,255,0.6); }
         .content ul li { margin-bottom: 4px; }
         .content .highlight {
             background: rgba(108,92,231,0.08);
             border-left: 3px solid #6C5CE7;
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+        .content .warning {
+            background: rgba(253,121,168,0.08);
+            border-left: 3px solid #FD79A8;
             padding: 12px 16px;
             border-radius: 0 8px 8px 0;
             margin: 12px 0;
@@ -95,12 +94,13 @@
 <!-- 中文版 -->
 <div class="content" id="content-zh">
 <h1>私隱政策</h1>
-<p class="meta">生效日期：2025 年 2 月 1 日 ｜ 最後更新：2026 年 2 月</p>
+<p class="meta">生效日期：2025 年 2 月 1 日 ｜ 最後更新：2026 年 3 月</p>
 <p>DAY 1（以下簡稱「我們」或「本應用」）致力於保護您的個人資料私隱。本私隱政策根據香港特別行政區《個人資料（私隱）條例》（第 486 章）（以下簡稱「PDPO」）的規定而制定，旨在說明我們如何收集、使用、儲存及保護您的個人資料。</p>
 <p>請您在使用本應用前，仔細閱讀並充分理解本私隱政策的全部內容。如您不同意本政策的任何內容，請立即停止使用本應用。使用本應用即表示您已閱讀、理解並同意本政策所述的做法。</p>
 
 <h2>一、我們收集的個人資料</h2>
 <p>根據 PDPO 保障資料第 1 原則，我們僅為直接相關的目的收集個人資料，且收集方式合法、公平。</p>
+
 <h3>1. 您主動提供的資料</h3>
 <ul>
     <li>基本身體資料：身高、體重、年齡、性別</li>
@@ -109,6 +109,7 @@
     <li>飲食偏好設定：飲食目標及相關偏好</li>
 </ul>
 <p>以上資料為向您提供個人化訓練與飲食建議所必需。如您不提供上述資料，部分功能可能受到限制，但不影響本應用的基本功能。</p>
+
 <h3>2. 透過 Apple HealthKit 取得的資料</h3>
 <p>經您明確授權後，我們將透過 Apple HealthKit 讀取以下健康與運動資料：</p>
 <ul>
@@ -120,19 +121,43 @@
     <li>體重紀錄、訓練紀錄</li>
 </ul>
 <p>您可隨時在 iOS 系統「設定 > 健康 > 資料取用與裝置」中管理或撤銷上述授權。</p>
+
 <h3>3. 女性用戶可選提供的資料</h3>
 <p>如您選擇使用生理週期管理功能，我們可能需要您提供生理週期資料（經期日期、週期長度）。此類資料為可選提供。</p>
+
 <h3>4. 我們不收集的資料</h3>
 <p>我們不會在應用內要求您提供以下資料：</p>
 <ul>
     <li>您的真實姓名、電話號碼或電郵地址</li>
     <li>您的地理位置資料</li>
-    <li>您的通訊錄、相片、麥克風等裝置權限相關資料</li>
+    <li>您的通訊錄等裝置權限相關資料</li>
     <li>任何裝置唯一識別碼（IDFA、IDFV 等）用於廣告追蹤</li>
 </ul>
+<p>注：當您主動使用 AI 食物識別功能時，您拍攝或選取的食物相片將被壓縮後傳送至第三方 AI 服務商進行分析（詳見第四節）。當您使用相機設定個人頭像時，頭像圖片僅儲存在您的裝置本地。</p>
 <p>如您主動以電郵聯絡我們，我們只會為回覆及處理您的查詢目的而使用該等聯絡資料，不會將其用於任何其他目的。</p>
+
+<h3>4a. 語音輸入功能</h3>
+<p>本應用在 AI 對話和跑步機專注模式中提供語音輸入功能。當您選擇使用語音輸入時：</p>
+<ul>
+    <li>本應用將請求麥克風和語音識別權限</li>
+    <li>語音資料僅在您的裝置本地透過 Apple 語音識別框架處理，轉換為文字後傳送給 AI</li>
+    <li>我們不錄製、儲存或傳輸您的原始音頻資料</li>
+    <li>您可隨時在 iOS 系統設定中撤銷麥克風和語音識別權限</li>
+</ul>
+
+<h3>4b. 本地網絡分享功能（碰一碰）</h3>
+<p>本應用提供透過本地網絡與附近裝置交換訓練計劃的「碰一碰」分享功能。使用該功能時：</p>
+<ul>
+    <li>資料僅透過本地 Wi-Fi/藍牙網絡在裝置間直接傳輸，不經過互聯網或我們的伺服器</li>
+    <li>僅傳輸訓練計劃資料，不傳輸個人健康資訊</li>
+    <li>需要您授權本地網絡存取權限，您可隨時在 iOS 系統設定中撤銷</li>
+</ul>
+
 <h3>5. 健康資料的特別保護</h3>
-<p>鑑於健康相關資料的敏感性質，我們對心率、HRV、體溫、睡眠、身體測量資料、生理週期資料等採取更高標準的保護措施。我們在應用首次使用流程中，透過專門的告知頁面，就上述資料的處理取得您的同意。</p>
+<p>鑑於健康相關資料的敏感性質，我們對以下資料採取更高標準的保護措施：心率、HRV、體溫、睡眠、身體測量資料、健康狀況自查資料、生理週期資料等。我們在應用首次使用流程中，透過專門的告知頁面，就上述資料的處理取得您的同意。</p>
+
+<h3>6. 帳戶與認證</h3>
+<p>本應用支持透過 Apple 登入和 Google 登入進行帳戶認證。我們僅從第三方認證服務取得必要的身份驗證憑據（如加密令牌），不會取得您的社交帳戶密碼、通訊錄或其他社交資訊。認證憑據以加密方式儲存在您裝置的 Keychain 中。</p>
 
 <h2>二、資料的使用（保障資料第 3 原則）</h2>
 <p>根據 PDPO 保障資料第 3 原則，您的個人資料僅用於收集時所述明的目的：</p>
@@ -142,49 +167,88 @@
     <li>為 AI 對話功能提供健康上下文資訊</li>
     <li>改善本應用的功能和用戶體驗</li>
 </ul>
+<p>我們不會在未經您同意的情況下，將您的資料用於上述目的以外的用途。</p>
 
 <h2>三、資料儲存與安全（保障資料第 4 原則）</h2>
+
 <h3>1. 本地儲存</h3>
-<p>您的所有個人資料均以加密方式儲存在您的 iOS 裝置本地，採用 Apple Core Data 框架進行管理。</p>
+<p>您的所有個人資料均以加密方式儲存在您的 iOS 裝置本地，採用 Apple Core Data 框架進行管理，受到 iOS 系統級資料保護機制的保障。</p>
+
 <h3>2. 資料傳輸原則</h3>
-<p>除您主動啟用的 AI 對話功能外（詳見第四節），我們不會將您的個人資料上傳到我們自己的或任何第三方的伺服器。您的資料由您完全掌控。</p>
-<h3>3. 資料安全措施</h3>
+<p>高度敏感資料（生理週期、健康狀況自查）僅保存在您的裝置本地，不會上傳至任何伺服器。當您同意開啟雲端同步後，訓練記錄、體重、心率數據等將通過加密傳輸儲存至我們的伺服器。</p>
+
+<h3>3. 雲端資料同步</h3>
+<p>登入並同意雲端資料同步後，以下資料將通過加密傳輸儲存在我們的伺服器上（託管於 Supabase，新加坡區域），用於跨裝置同步和資料恢復：</p>
+<ul>
+    <li>訓練計劃、訓練歷史記錄和運動詳情</li>
+    <li>體重和體脂記錄</li>
+    <li>飲食記錄和常用食物</li>
+    <li>AI 聊天記錄、AI 記憶和 AI 反饋</li>
+    <li>每日狀態記錄、營養目標</li>
+    <li>與賬號關聯的功能使用統計（不含個人內容或健康數據）</li>
+    <li>心率數據（心率樣本、心率區間分佈、心率變異性 HRV）</li>
+</ul>
+<div class="warning">
+<strong>以下資料不會同步至伺服器（僅保留在本地）：</strong><br>
+- 生理週期配置和經期資料<br>
+- 健康狀況自查資訊（慢性疾病）<br>
+- HealthKit 原始資料（體溫、睡眠階段、步數）
+</div>
+<div class="highlight">
+<strong>重要說明：</strong><br>
+- 如需終止雲端資料處理，可在設定中選擇「刪除全部雲端資料」或刪除賬號<br>
+- 提交刪除請求後，資料將進入刪除流程並盡快從伺服器清除<br>
+- 經您同意，與賬號關聯的去標識化訓練資料可能用於改進 AI 模型，您可隨時通過刪除雲端資料退出
+</div>
+
+<h3>4. 資料備份</h3>
+<p>您的應用資料備份還取決於您的本地 iTunes/Finder 備份設定。備份資料的安全性由 Apple 的備份加密機制保障。</p>
+
+<h3>5. 資料安全措施</h3>
 <ul>
     <li>使用 iOS 系統提供的資料保護等級加密</li>
     <li>AI 對話中傳送的資料經過脫敏處理</li>
     <li>不儲存任何可直接識別您個人身份的資料</li>
 </ul>
 <p>儘管我們已採取合理的安全措施，但請您理解，在互聯網環境下不存在絕對安全的保障措施。</p>
-<h3>4. 資料保留期限（保障資料第 2 原則）</h3>
+
+<h3>6. 資料保留期限（保障資料第 2 原則）</h3>
 <p>您的個人資料不會被保留超過達致原來目的所需的時間。當您卸載本應用時，所有本地儲存的個人資料將被永久刪除。就我們所知，AI 對話中傳送至服務端的脫敏資料用於即時生成回覆，在 API 直接調用模式下，處理完成後不會在服務端留存。但我們無法獨立核實第三方服務提供商的內部資料處理流程。</p>
 
+<h3>7. 功能使用統計（需單獨同意）</h3>
+<p>當您同意雲端資料同步後，我們還會收集以下功能使用統計資料（不含個人內容或健康數據）：您使用了哪些功能、功能間的切換順序。上述統計僅用於了解哪些功能最受歡迎，以便持續優化產品體驗。此資料與您的雲端同步資料一同管理，您可以隨時在設定中刪除。</p>
+
 <h2>四、AI 對話功能與資料處理</h2>
+
 <h3>1. 資料傳送範圍</h3>
 <p>當您使用 AI 對話功能時，我們會將以下上下文資訊傳送至 AI 服務提供商：</p>
 <ul>
     <li>您的年齡段（如「25-29 歲」，非精確年齡）</li>
     <li>身高（cm）、體重（kg）、體脂率（%）</li>
-    <li>當前訓練階段、飲食目標及營養目標（每日熱量、蛋白質目標）</li>
+    <li>當前訓練階段、飲食目標及營養目標</li>
     <li>近期訓練資料（訓練計劃名稱、動作、重量、組數、訓練頻次）</li>
-    <li>健康資料數值（靜息心率、心率變異性 HRV、體溫、睡眠時長、每日步數、活動能量消耗）</li>
+    <li>健康資料數值（靜息心率、HRV、體溫、睡眠時長、每日步數、活動能量消耗）</li>
     <li>當日身體狀態自評資訊（精力、酸痛、壓力等級）</li>
     <li>基礎代謝率（BMR）估算值</li>
     <li>生理週期階段名稱（僅女性用戶啟用時）</li>
 </ul>
+
 <h3>2. 私隱保護措施</h3>
 <ul>
     <li>使用年齡段替代精確年齡，避免精準畫像</li>
-    <li>不傳送任何可直接識別您個人身份的資料（如姓名、電話號碼、地理位置等）</li>
+    <li>不傳送任何可直接識別您個人身份的資料</li>
     <li>每次對話獨立處理，不會在服務端建立用戶檔案</li>
     <li>生理週期僅傳送階段名稱（如「卵泡期」），不傳送精確日期</li>
+    <li>為 AI 中繼服務分配隨機裝置標識符（非 IDFA/IDFV），僅用於路由請求</li>
 </ul>
-<h3>3. 本地儲存</h3>
-<p>您的 AI 對話歷史紀錄僅保存在您的裝置本地，不會上傳至我們或第三方的伺服器。</p>
+
+<h3>3. 對話紀錄儲存</h3>
+<p>您的 AI 對話歷史紀錄默認保存在您的裝置本地。當您同意開啟雲端資料同步後，對話紀錄將加密同步至我們的伺服器。如需終止雲端資料處理，可在設定中選擇「刪除全部雲端資料」或刪除賬號。</p>
 
 <h3>4. 第三方 AI 服務提供商</h3>
-<p>我們默認使用阿里雲 DashScope（通義千問）大語言模型 API 服務處理 AI 對話請求。您也可以在應用設定中自行配置其他 AI 服務商。如您在應用設定中自行配置了其他第三方 AI 服務地址，資料將傳送至您所指定的伺服器，其資料處理規則以該服務商的私隱政策為準，我們無法對此承擔責任。</p>
+<p>我們默認使用阿里雲 DashScope（通義千問）大語言模型 API 服務處理 AI 對話請求。您也可以在應用設定中自行配置其他 AI 服務商。如您配置了其他第三方 AI 服務地址，資料將傳送至您所指定的伺服器，其資料處理規則以該服務商的私隱政策為準，我們無法對此承擔責任。</p>
 <div class="highlight">
-<strong>我們的控制措施：</strong>僅傳送脫敏統計摘要 ｜ 每次對話獨立發起 ｜ HTTPS 加密傳輸 ｜ 不提供可識別身份資料
+<strong>我們的控制措施：</strong>僅傳送經脫敏處理的統計摘要 ｜ 每次對話獨立發起 ｜ HTTPS 加密傳輸 ｜ 不提供可識別身份資料
 </div>
 <div class="highlight">
 <strong>合約約束：</strong>根據阿里雲 DashScope 服務協議（2024/5/1 生效版），服務商應按客戶指示處理業務資料，不為自身目的處理用戶資料。服務商須依照適用法律對輸入與輸出內容進行合規審查。
@@ -197,29 +261,58 @@
 </div>
 
 <h3>5. 跨境資料傳輸</h3>
-<p>當您使用 AI 對話功能時，經脫敏處理的資料可能會傳輸至中國大陸境內的 AI 服務提供商。我們參照 PDPO 第 33 條有關跨境傳輸的原則，已採取以下步驟確保等同保障：</p>
+<p>當您使用 AI 對話功能時，經脫敏處理的資料可能會傳輸至中國大陸境內的 AI 服務提供商進行處理。我們參照 PDPO 第 33 條有關跨境傳輸的原則，已採取以下步驟確保等同保障：</p>
 <ul>
-    <li>資料最小化：僅傳輸脫敏統計摘要</li>
+    <li>資料最小化：僅傳輸經脫敏處理的統計摘要</li>
     <li>傳輸加密：HTTPS 加密</li>
     <li>合約約束：服務商承諾按客戶指示處理</li>
     <li>定期審閱：定期審閱服務商條款</li>
 </ul>
 
-<h2>五、Apple HealthKit 資料使用規範</h2>
+<h3>6. AI 食物識別功能</h3>
+<p>當您使用拍照識別食物功能時：</p>
 <ul>
-    <li>HealthKit 資料嚴格遵循 Apple 開發者指南和審核指南</li>
+    <li>資料收集：您拍攝或選取的食物相片經過壓縮處理（最長邊 800 像素，約 200KB JPEG 格式）後，傳送至第三方 AI 服務商進行分析</li>
+    <li>處理目的：僅用於識別食物名稱和估算營養成分</li>
+    <li>資料去向：相片僅用於即時分析，不會被永久儲存</li>
+    <li>第三方服務商：與 AI 對話功能使用相同的服務商（默認阿里雲 DashScope）</li>
+    <li>準確性聲明：AI 識別結果僅供參考，可能存在誤差</li>
+    <li>知情同意：首次使用該功能時，應用會彈出知情同意說明</li>
+</ul>
+
+<h3>7. 自動化決策說明</h3>
+<p>本應用使用演算法對您的健康資料進行分析，自動生成訓練準備度評估和訓練計劃建議。該自動化決策僅供參考，不對您的權益產生法律效力。最終訓練決定權始終由您本人掌握。</p>
+
+<h2>五、Apple HealthKit 資料使用規範</h2>
+<h3>1. 資料讀取用途</h3>
+<p>我們嚴格限制 HealthKit 資料的使用範圍，僅用於評估您的身體恢復狀態、為訓練決策系統提供資料支持、為 AI 對話建議提供健康上下文資訊。</p>
+
+<h3>2. 資料寫入內容</h3>
+<p>經您授權後，我們會向 HealthKit 寫入體重紀錄和訓練紀錄（訓練類型、時長、估算消耗熱量）。</p>
+
+<h3>3. 合規聲明</h3>
+<ul>
+    <li>HealthKit 資料的使用嚴格遵循 Apple HealthKit 開發者指南和 App Store 審核指南</li>
     <li>不會用於廣告投放、資料探勘或出售給第三方</li>
-    <li>不會儲存到 iCloud 以外的雲端環境</li>
+    <li>HealthKit 原始資料僅儲存在您的裝置本地，不會上傳至任何伺服器</li>
     <li>所有權限僅可透過 iOS 系統設定管理，本應用無法繞過</li>
 </ul>
 
 <h2>六、您的權利（保障資料第 6 原則）</h2>
-<p>您享有查閱權、改正權、刪除權、撤回同意權及取得副本權。如需行使，請聯絡 <a href="mailto:weilliamyaojiay@gmail.com">weilliamyaojiay@gmail.com</a>。我們將在 40 日內回覆。</p>
+<p>根據 PDPO 保障資料第 6 原則，您享有以下權利：</p>
+<ul>
+    <li><strong>查閱權：</strong>您有權查閱我們是否持有您的個人資料，以及取得該資料的副本</li>
+    <li><strong>改正權：</strong>如您的個人資料不準確，您有權要求改正</li>
+    <li><strong>刪除權：</strong>您可以在應用內刪除訓練紀錄、對話歷史等資料，或透過卸載應用永久清除</li>
+    <li><strong>撤回同意權：</strong>您可以在 iOS 系統設定中撤銷 HealthKit 存取權限，或在應用設定中關閉 AI 對話的健康資料共享</li>
+    <li><strong>取得副本權：</strong>您可以透過 iOS 系統的健康資料匯出功能，取得本應用寫入 HealthKit 的資料副本</li>
+</ul>
+<p>如您希望行使上述權利，請聯絡 <a href="mailto:foraiandfocus@gmail.com">foraiandfocus@gmail.com</a>。我們將在四十（40）日內回覆。</p>
 
 <h2>七、未成年人保護</h2>
-<p>本應用不面向 16 歲以下兒童。16-18 歲未成年人須在監護人同意下使用。</p>
+<p>本應用不面向 16 歲以下兒童。16-18 歲未成年人須在監護人同意下使用。如我們發現在未獲得監護人同意的情況下收集了未成年人的個人資料，將盡快予以刪除。</p>
 
-<h2>八、政策變更</h2>
+<h2>八、私隱政策的變更（保障資料第 5 原則）</h2>
 <p>政策發生重大變更時，我們將在應用內以彈窗通知。繼續使用即表示接受修訂後的政策。</p>
 
 <h2>九、適用法律</h2>
@@ -227,7 +320,8 @@
 
 <h2>十、聯絡我們</h2>
 <p>獨立開發者：Liu Azure<br>
-電郵：<a href="mailto:weilliamyaojiay@gmail.com">weilliamyaojiay@gmail.com</a></p>
+聯絡電郵：<a href="mailto:foraiandfocus@gmail.com">foraiandfocus@gmail.com</a><br>
+應用內反饋功能</p>
 <p>如有投訴，您亦可向香港個人資料私隱專員公署提出：<br>
 網址：<a href="https://www.pcpd.org.hk" target="_blank">www.pcpd.org.hk</a> ｜ 電話：(852) 2827 2827</p>
 </div>
@@ -235,105 +329,203 @@
 <!-- English Version -->
 <div class="content" id="content-en" style="display:none;">
 <h1>Privacy Policy</h1>
-<p class="meta">Effective Date: 1 February 2025 ｜ Last Updated: February 2026</p>
-<p>DAY 1 ("we," "our," or "the App") is committed to protecting your personal data privacy. This Privacy Policy is prepared in accordance with the Personal Data (Privacy) Ordinance (Cap. 486) of the Hong Kong Special Administrative Region ("PDPO").</p>
-<p>Please read this Privacy Policy carefully before using the App. If you do not agree with any part of this policy, please discontinue use of the App immediately.</p>
+<p class="meta">Effective Date: 1 February 2025 ｜ Last Updated: March 2026</p>
+<p>DAY 1 ("we," "our," or "the App") is committed to protecting your personal data privacy. This Privacy Policy is prepared in accordance with the Personal Data (Privacy) Ordinance (Cap. 486) of the Hong Kong Special Administrative Region ("PDPO") and describes how we collect, use, store, and protect your personal data.</p>
+<p>Please read this Privacy Policy carefully before using the App. If you do not agree with any part of this policy, please discontinue use of the App immediately. By using the App, you acknowledge that you have read, understood, and agree to the practices described herein.</p>
 
 <h2>1. Personal Data We Collect</h2>
-<p>In accordance with DPP 1 of the PDPO, we collect personal data only for directly related purposes, by lawful and fair means.</p>
-<h3>1.1 Information You Provide</h3>
+<p>In accordance with Data Protection Principle ("DPP") 1 of the PDPO, we collect personal data only for purposes that are directly related, by lawful and fair means.</p>
+
+<h3>1.1 Information You Provide Directly</h3>
 <ul>
     <li>Basic physical information: height, weight, age, gender</li>
     <li>Training-related information: experience, goals, records, and plans</li>
     <li>Health self-assessment: self-reported chronic conditions</li>
     <li>Dietary preferences and goals</li>
 </ul>
+<p>This information is necessary for personalised training and dietary recommendations. If you choose not to provide it, some features may be limited.</p>
+
 <h3>1.2 Apple HealthKit Data</h3>
 <p>With your explicit authorisation, we access: sleep data, heart rate, HRV, body temperature, step count, active energy, weight, and workout records. You may manage or revoke this at any time via iOS Settings > Health.</p>
+
 <h3>1.3 Optional Data from Female Users</h3>
 <p>Menstrual cycle data (period dates, cycle length), used solely for cycle-aware training adjustments.</p>
+
 <h3>1.4 Information We Do NOT Collect</h3>
-<p>We do not require you to provide within the App: your real name, phone number, email, location, contacts, photos, microphone access, or any device identifiers for tracking.</p>
-<p>If you voluntarily contact us by email, we will only use such information for responding to your enquiry.</p>
+<ul>
+    <li>Your real name, phone number, email, or location</li>
+    <li>Contacts or other unrelated device permissions</li>
+    <li>Any device identifiers (IDFA, IDFV) for tracking</li>
+</ul>
+<p>Note: When you use AI food recognition, compressed food photos are sent to a third-party AI provider for analysis (see Section 4). Profile avatars are stored locally only.</p>
+<p>If you voluntarily contact us by email, we use it solely for responding to your enquiry.</p>
+
+<h3>1.4a Voice Input Feature</h3>
+<p>The App offers voice input in AI conversations and Treadmill Focus mode. When using voice input:</p>
+<ul>
+    <li>Microphone and speech recognition permissions are requested</li>
+    <li>Voice data is processed locally via Apple's Speech Recognition framework</li>
+    <li>We do not record, store, or transmit raw audio data</li>
+    <li>You may revoke permissions at any time in iOS Settings</li>
+</ul>
+
+<h3>1.4b Local Network Sharing (Bump Share)</h3>
+<p>The "bump share" feature exchanges training plans via local network:</p>
+<ul>
+    <li>Data transmitted directly between devices, never through the internet or our servers</li>
+    <li>Only training plan data is shared; no personal health information</li>
+    <li>Local network permission required; revocable in iOS Settings</li>
+</ul>
+
+<h3>1.5 Special Protection of Health Data</h3>
+<p>We apply heightened protection to health data, body measurements, health self-assessments, and menstrual cycle data. Consent is obtained during initial App setup through a dedicated notice page.</p>
+
+<h3>1.6 Account and Authentication</h3>
+<p>The App supports Sign in with Apple and Google Sign-In. We only obtain necessary authentication credentials (encrypted tokens). We do not access your social account passwords, contacts, or other information. Credentials are stored in your device's Keychain.</p>
 
 <h2>2. Use of Data (DPP 3)</h2>
-<p>Your personal data is used only for: personalised training plans, recovery assessment, AI conversation context, and improving App functionality.</p>
+<p>Your personal data is used only for: personalised training plans, recovery assessment, AI conversation context, and improving App functionality. We will not use your data for other purposes without your consent.</p>
 
 <h2>3. Data Storage and Security (DPP 4)</h2>
-<h3>3.1 Local Storage</h3>
-<p>All personal data is stored locally on your iOS device using Apple's Core Data framework.</p>
-<h3>3.2 Data Transmission Principle</h3>
-<p>Except when you actively use the AI conversation feature (see Section 4), we do not upload your personal data to any server. Your data remains under your control.</p>
-<h3>3.3 Data Retention (DPP 2)</h3>
-<p>Data is kept only as long as necessary. Uninstalling the App permanently deletes all local data. To our knowledge, de-identified data sent to the AI service is not retained after processing, but we cannot independently verify third-party internal practices.</p>
 
-<h2>4. AI Conversation Feature</h2>
-<h3>4.1 Data Transmitted</h3>
-<p>When you use the AI conversation feature, the following contextual information is sent to our AI service provider:</p>
+<h3>3.1 Local Storage</h3>
+<p>All personal data is stored locally on your iOS device using Apple's Core Data framework with system-level protection.</p>
+
+<h3>3.2 Data Transmission Principle</h3>
+<p>Highly sensitive data (menstrual cycle, health self-assessments) is kept local only. When you consent to cloud sync, training records, weight, and heart rate data are encrypted and stored on our servers.</p>
+
+<h3>3.3 Cloud Data Sync</h3>
+<p>After login and consent, the following is synced to our servers (Supabase, Singapore region):</p>
 <ul>
-    <li>Your age range (e.g., "25-29," not your exact age)</li>
-    <li>Height (cm), weight (kg), body fat percentage (%)</li>
-    <li>Current training phase, dietary goals, and nutrition targets (daily calorie and protein goals)</li>
-    <li>Recent training data (plan names, exercises, weights, sets, training frequency)</li>
-    <li>Health data values (resting heart rate, heart rate variability/HRV, body temperature, sleep duration, daily steps, active energy burned)</li>
-    <li>Daily body condition self-assessment (energy level, soreness, stress level)</li>
-    <li>Estimated basal metabolic rate (BMR)</li>
-    <li>Menstrual cycle phase name (only when enabled by female users)</li>
+    <li>Training plans, history, and exercise records</li>
+    <li>Weight and body fat records</li>
+    <li>Food records and favourites</li>
+    <li>AI chat history, memory, and feedback</li>
+    <li>Daily status, nutrition goals</li>
+    <li>Anonymous feature usage statistics</li>
+    <li>Heart rate data (samples, zones, HRV)</li>
 </ul>
+<div class="warning">
+<strong>Data NOT synced (local only):</strong><br>
+- Menstrual cycle data<br>
+- Health condition self-assessments<br>
+- HealthKit raw data (temperature, sleep stages, steps)
+</div>
+<div class="highlight">
+<strong>Important:</strong><br>
+- To stop cloud processing, use "Delete All Cloud Data" or delete your account in Settings<br>
+- With your consent, de-identified training data may be used to improve AI models; opt out by deleting cloud data
+</div>
+
+<h3>3.4 Data Backup</h3>
+<p>App data backup depends on your iTunes/Finder settings. Security is ensured by Apple's backup encryption.</p>
+
+<h3>3.5 Security Measures</h3>
+<ul>
+    <li>iOS Data Protection class encryption</li>
+    <li>De-identification of AI conversation data</li>
+    <li>No storage of directly identifiable personal information</li>
+</ul>
+
+<h3>3.6 Data Retention (DPP 2)</h3>
+<p>Data is kept only as long as necessary. Uninstalling permanently deletes all local data. De-identified AI data is not retained after processing (to our knowledge).</p>
+
+<h3>3.7 Feature Usage Statistics (Requires Consent)</h3>
+<p>With cloud sync consent, we collect feature usage statistics (which features you use, switching order). No personal content or health data included. Used solely to improve the product. Deletable in Settings.</p>
+
+<h2>4. AI Conversation Feature and Data Processing</h2>
+
+<h3>4.1 Scope of Data Transmitted</h3>
+<ul>
+    <li>Age range (e.g., "25-29," not exact age)</li>
+    <li>Height, weight, body fat percentage</li>
+    <li>Training phase, dietary/nutrition goals</li>
+    <li>Recent training data (plans, exercises, weights, sets, frequency)</li>
+    <li>Health data values (resting HR, HRV, temperature, sleep, steps, energy)</li>
+    <li>Daily body condition self-assessment</li>
+    <li>Estimated BMR</li>
+    <li>Menstrual cycle phase name (if enabled)</li>
+</ul>
+
 <h3>4.2 Privacy Safeguards</h3>
 <ul>
-    <li>Age ranges instead of exact ages to prevent precise profiling</li>
-    <li>No personally identifiable information transmitted (such as name, phone number, or location)</li>
-    <li>Each conversation processed independently; no user profiles built on server side</li>
-    <li>Menstrual cycle data transmits only the phase name (e.g., "follicular phase"), not exact dates</li>
+    <li>Age ranges prevent precise profiling</li>
+    <li>No personally identifiable information transmitted</li>
+    <li>Each conversation processed independently</li>
+    <li>Menstrual data: only phase name, not exact dates</li>
+    <li>Random device identifier (not IDFA/IDFV) for routing only</li>
 </ul>
 
-<h3>4.3 Third-Party AI Service Provider</h3>
-<p>We use Alibaba Cloud DashScope (Qwen) by default. You may configure other providers in App settings. If you configure a custom third-party AI service address in the App settings, data will be sent to the server you specify, and the data processing rules of that service provider's privacy policy shall apply. We cannot assume responsibility for such third-party services.</p>
+<h3>4.3 Conversation Storage</h3>
+<p>Chat history is stored locally by default. With cloud sync consent, it is encrypted and synced to our servers. Use "Delete All Cloud Data" to stop cloud processing.</p>
+
+<h3>4.4 Third-Party AI Service Provider</h3>
+<p>We use Alibaba Cloud DashScope (Qwen) by default. You may configure other providers in Settings. If you configure a custom service, data will be sent to your specified server under their privacy policy.</p>
 <div class="highlight">
 <strong>Our safeguards:</strong> De-identified summaries only | Independent requests | HTTPS encryption | No PII provided
 </div>
 <div class="highlight">
-<strong>Contractual obligations:</strong> Per the DashScope Service Agreement (effective 1 May 2024), the provider shall process data per customer instructions and not for its own purposes. The provider must conduct content compliance reviews as required by law.
+<strong>Contractual obligations:</strong> Per the DashScope Service Agreement (effective 1 May 2024), the provider processes data per customer instructions and not for its own purposes. Compliance reviews are conducted as required by law.
 </div>
 <div class="highlight">
-<strong>Fair disclosure:</strong> These contractual terms reflect our review at the time. The provider may amend its terms in the future. We cannot independently verify internal data handling or guarantee data will not be used for model training. We will notify you of material changes we become aware of.
+<strong>Fair disclosure:</strong> These terms reflect our review at the time. The provider may amend its terms. We cannot independently verify internal handling or guarantee data will not be used for model training. We will notify you of material changes.
 </div>
 <div class="highlight">
-<strong>Your choices:</strong> AI chat is optional and does not affect other features. You may disable it or withdraw health data sharing at any time. We recommend reviewing the <a href="https://terms.alicdn.com/legal-agreement/terms/common_platform_service/20230717170036392/20230717170036392.html" target="_blank">DashScope Service Agreement</a>.
+<strong>Your choices:</strong> AI chat is optional. You may disable it or withdraw health data sharing at any time. We recommend reviewing the <a href="https://terms.alicdn.com/legal-agreement/terms/common_platform_service/20230717170036392/20230717170036392.html" target="_blank">DashScope Service Agreement</a>.
 </div>
 
-<h3>4.4 Cross-Border Data Transfer</h3>
-<p>With reference to PDPO s.33, we have taken reasonably practicable steps to ensure equivalent protection: data minimisation, HTTPS encryption, contractual safeguards, and periodic review of provider terms.</p>
+<h3>4.5 Cross-Border Data Transfer</h3>
+<p>With reference to PDPO s.33, we have taken reasonably practicable steps: data minimisation, HTTPS encryption, contractual safeguards, and periodic review of provider terms.</p>
 
-<h2>5. Apple HealthKit Compliance</h2>
+<h3>4.6 AI Food Recognition Feature</h3>
+<ul>
+    <li>Food photos compressed (max 800px, ~200KB JPEG) and sent for analysis</li>
+    <li>Purpose: identify food and estimate nutrition only</li>
+    <li>Photos used for real-time analysis only, not permanently stored</li>
+    <li>Same provider as AI chat (DashScope by default)</li>
+    <li>Results are estimates; verify important information independently</li>
+    <li>Informed consent notice shown on first use</li>
+</ul>
+
+<h3>4.7 Automated Decision-Making</h3>
+<p>The App uses algorithms for training readiness assessments and plan recommendations. These are for reference only with no legally binding effect. The final decision rests with you.</p>
+
+<h2>5. Apple HealthKit Data Usage Compliance</h2>
 <ul>
     <li>Strict compliance with Apple HealthKit Developer Guidelines</li>
     <li>No use for advertising, data mining, or sale to third parties</li>
-    <li>No cloud storage outside iCloud</li>
+    <li>Raw HealthKit data stored locally only, never uploaded</li>
     <li>All permissions managed through iOS System Settings only</li>
 </ul>
 
 <h2>6. Your Rights (DPP 6)</h2>
-<p>You have the right to access, correct, delete, withdraw consent, and obtain copies of your data. Contact <a href="mailto:weilliamyaojiay@gmail.com">weilliamyaojiay@gmail.com</a>. We will respond within 40 days.</p>
+<ul>
+    <li><strong>Access:</strong> View your data on the "Me" page</li>
+    <li><strong>Correction:</strong> Update your information anytime</li>
+    <li><strong>Deletion:</strong> Delete data within the App or by uninstalling</li>
+    <li><strong>Withdraw consent:</strong> Revoke HealthKit access in iOS Settings; disable AI health data sharing in App Settings</li>
+    <li><strong>Data portability:</strong> Export HealthKit data via iOS Health export</li>
+</ul>
+<p>Contact <a href="mailto:foraiandfocus@gmail.com">foraiandfocus@gmail.com</a> to exercise your rights. We respond within 40 days.</p>
 
 <h2>7. Protection of Minors</h2>
-<p>Not intended for children under 16. Users aged 16-18 require parental consent.</p>
+<p>Not intended for children under 16. Users 16-18 require parental consent. We will promptly delete any data collected from minors without consent.</p>
 
-<h2>8. Changes to This Policy</h2>
-<p>Material changes will be notified via in-app pop-up. Continued use constitutes acceptance.</p>
+<h2>8. Changes to This Policy (DPP 5)</h2>
+<p>Material changes notified via in-app pop-up. Continued use constitutes acceptance.</p>
 
 <h2>9. Governing Law</h2>
 <p>This policy is governed by the laws of the Hong Kong SAR, including the PDPO (Cap. 486).</p>
 
 <h2>10. Contact Us</h2>
 <p>Independent Developer: Liu Azure<br>
-Email: <a href="mailto:weilliamyaojiay@gmail.com">weilliamyaojiay@gmail.com</a></p>
+Email: <a href="mailto:foraiandfocus@gmail.com">foraiandfocus@gmail.com</a><br>
+In-app feedback feature</p>
 <p>Complaints may also be lodged with the PCPD:<br>
 <a href="https://www.pcpd.org.hk" target="_blank">www.pcpd.org.hk</a> | Tel: (852) 2827 2827</p>
 </div>
 
-<footer>&copy; 2025 DAY 1. All rights reserved.</footer>
+<footer>&copy; 2025–2026 DAY 1. All rights reserved.</footer>
 
 <script>
 function switchLang(lang) {
